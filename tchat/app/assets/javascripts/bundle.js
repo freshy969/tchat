@@ -837,10 +837,15 @@ var _reactDom = __webpack_require__(16);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _session_api_util = __webpack_require__(25);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
   var root = document.getElementById('root');
+  window.login = _session_api_util.login;
+  window.logout = _session_api_util.logout;
+  window.signup = _session_api_util.signup;
   _reactDom2.default.render(_react2.default.createElement(
     'h1',
     null,
@@ -19354,6 +19359,39 @@ function camelize(string) {
 }
 
 module.exports = camelize;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var login = exports.login = function login(user) {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/session',
+    data: { user: user }
+  });
+};
+
+var signup = exports.signup = function signup(user) {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/user',
+    data: { user: user }
+  });
+};
+
+var logout = exports.logout = function logout() {
+  return $.ajax({
+    method: 'DELETE',
+    url: '/api/session'
+  });
+};
 
 /***/ })
 /******/ ]);

@@ -39,7 +39,12 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome back!
+          <p>On T-Chat, you’re less than a photo. <br></br>
+            You have nothing interesting to say, no passions to share, <br></br>
+            and zero things to talk about that are more interesting <br></br>
+            than the weather. Get noticed not for who you are, but rather <br></br>
+            what you look like. Because you deserve what dating <br></br>
+            deserves: nothing.</p>
           <br/>
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}

@@ -1,20 +1,23 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signup } from '../../actions/session_actions';
+import { signup, clearErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
+
 
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
     formType: 'signup',
-    navLink: <Link to="/login">Already have an accont? log in!</Link>,
+    linkType: '/login',
+    message: 'Already have an account? Login silly.'
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     processForm: (user) => dispatch(signup(user)),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 

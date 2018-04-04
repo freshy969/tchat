@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -9,6 +10,10 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleErrors() {
+    this.props.clearErrors();
   }
 
   update(field) {
@@ -36,6 +41,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -46,7 +52,8 @@ class LoginForm extends React.Component {
             what you look like. Because you deserve what dating <br></br>
             deserves: nothing.</p>
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          Please {this.props.formType} or
+          <Link to={this.props.linkType} onClick={this.handleErrors}>{this.props.message}</Link>
           {this.renderErrors()}
           <div className="login-form">
             <br/>

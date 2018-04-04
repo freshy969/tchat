@@ -9,7 +9,6 @@ const App = () => (
   <div>
     <header>
       <h1>Welcome To T-Chat</h1>
-      <h2>what's up</h2>
       <WelcomeContainer />
     </header>
     <br></br>

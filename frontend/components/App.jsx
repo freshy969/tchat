@@ -8,7 +8,7 @@ import { AuthRoute} from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <span>tChat</span>
+      <span className="logo">tChat</span>
       <h1>YOU DESERVE <br></br> BETTER</h1>
       <p>On T-Chat, you’re more than just a gender. You <br></br>
         have stories to tell, and passions to share, and <br></br>

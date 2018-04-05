@@ -10,7 +10,7 @@ const App = () => (
     <header>
       <span className="logo">tChat</span>
       <h1>YOU DESERVE <br></br> BETTER</h1>
-      <p>On T-Chat, you’re more than just a gender. You <br></br>
+      <p className="Description">On T-Chat, you’re more than just a gender. You <br></br>
         have stories to tell, and passions to share, and <br></br>
         things to talk about that are more interesting than <br></br>
         the weather. Get noticed for who you are, not <br></br>
@@ -18,7 +18,7 @@ const App = () => (
         deserves: better.</p>
       <WelcomeContainer />
       <form className="fakeforms">
-        <p>You Are A</p>
+        <p className="your">You Are A</p>
         <div className="forms">
           <div className="fakeform">
             <select name="sexuality">

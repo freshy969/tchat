@@ -50,9 +50,6 @@ class LoginForm extends React.Component {
           <span className="modal-close js-modal-close">&times;</span>
           Please {this.props.formType} or
           <Link to={this.props.linkType} onClick={this.handleErrors}>{this.props.message}</Link>
-          <div className="errors">
-            {this.renderErrors()}
-          </div>
           <div className="login-form">
             <br/>
             <label>Username:
@@ -70,6 +67,9 @@ class LoginForm extends React.Component {
                 className="login-input"
               />
             </label>
+            <div className="errors">
+              {this.renderErrors()}
+            </div>
             <br/>
               <input className="session-submit" type="submit" value={this.props.formType} />
               <span className="button-alternative">or <strong className="js-modal-close">Cancel</strong></span>

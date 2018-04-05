@@ -7,11 +7,13 @@ const sessionLinks = () => (
   <nav className="login-signup">
     <div className="login">
       <span>Have an account?</span>
-      <Link to="/login" className="signin js-modal-open">Sign In</Link>
+      <button className="signing">
+        <Link to="/login" className="signin js-modal-open">Sign In</Link>
+      </button>
     </div>
-    <div className="signup">
+    <button className="signup">
       <Link to="/signup" className="signups js-modal-open">Join Today</Link>
-    </div>
+    </button>
   </nav>
 );
 

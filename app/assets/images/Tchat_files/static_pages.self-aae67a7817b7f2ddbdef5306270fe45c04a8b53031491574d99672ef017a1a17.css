@@ -1,0 +1,227 @@
+/* line 5, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body {
+  animation: slideshow 10s linear infinite;
+  transition-duration: 0.7s;
+  height: 100%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: center -10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  background-attachment: fixed;
+  color: white;
+  margin-left: 20px;
+}
+@keyframes slideshow {
+  0% {
+    background-image: url("/assets/splash-image1-af5b93490f27abff301b53bf4cda0dc4a2aa1b82af22dc85ac689806f33354d7.jpg");
+  }
+  25% {
+    background-image: url("/assets/splash-image2-40bd9ca1e2ba2b1b932aef9eff53af0db48cdc3543c429d2dd1bc80e61a29fd2.jpg");
+  }
+  50% {
+    background-image: url("/assets/splash-image4-3bfa6db1afee6a99f1b13b9b3988bfb9525a77360292d476abe1cd2ce33c419c.jpg");
+  }
+  75% {
+    background-image: url("/assets/splash-image5-3ac0ca4aab4e8f9b174c38715138883987c6866659ee23f981e2945f4be8b979.jpg");
+  }
+  100% {
+    background-image: url("/assets/splash-image1-af5b93490f27abff301b53bf4cda0dc4a2aa1b82af22dc85ac689806f33354d7.jpg");
+  }
+}
+/* line 34, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .logo {
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  padding: 150px;
+  padding-top: 40px;
+  font-weight: 900;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 70px;
+}
+/* line 45, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body h1 {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+  font-size: 60px;
+  color: #fff !important;
+  padding-left: 150px;
+  font-family: GT America,sans-serif;
+  -webkit-text-stroke: 1px black;
+  line-height: 70px;
+  padding-bottom: 0px;
+  text-shadow: -1px 1px black, -2px 2px black, -3px 3px black, -4px 4px black, -5px 5px black, -6px 6px black, -7px 7px black, -8px 8px black;
+}
+/* line 67, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .Description {
+  padding-left: 150px;
+  padding-top: 15px;
+  font-size: 20px;
+  color: black;
+  line-height: 30px;
+}
+/* line 74, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup {
+  float: right;
+  font-size: 12px;
+  font-family: GT America,sans-serif;
+}
+/* line 79, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  color: black;
+}
+/* line 88, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup .login {
+  position: absolute;
+  top: 40px;
+  right: 70px;
+  font-family: GT America,sans-serif;
+}
+/* line 95, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup .login .signin {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+/* line 100, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup .login span {
+  margin: 20px;
+  font-size: 14px;
+  color: black;
+}
+/* line 106, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup .signup {
+  padding: 14px;
+  margin-top: 70px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 112, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup .signup a {
+  font-size: 20px;
+  color: white;
+}
+/* line 119, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .fakeforms {
+  padding-left: 150px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* line 125, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .fakeforms p {
+  font-size: 17px;
+  color: black;
+  font-weight: bold;
+  line-height: 40px;
+}
+/* line 133, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .forms {
+  display: flex;
+  flex-direction: row;
+}
+/* line 136, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .forms :hover {
+  box-shadow: 1px 1px 4px black;
+}
+/* line 141, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .fakeform {
+  background: url("/assets/expand-arrow-3065ad82232be79cea9f503ff76664397a225c17238b680e22ad756c3dfad63d.png") no-repeat white;
+  background-size: 15px;
+  background-position: 90% 50%;
+  width: 160px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+/* line 142, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .fakeform :hover {
+  cursor: pointer;
+  box-shadow: 10px 10px black;
+}
+/* line 146, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .fakeform :focus {
+  outline: 0px;
+}
+/* line 159, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .fakeform select {
+  background: transparent;
+  width: 268px;
+  padding: 5px;
+  font-size: 19px;
+  line-height: 1;
+  border: 0;
+  height: 50px;
+  -webkit-appearance: none;
+  text-indent: 10px;
+}
+
+/* line 172, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal {
+  display: none;
+}
+
+/* line 176, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal.is-open {
+  display: block;
+}
+
+/* line 180, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* line 190, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal-form {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -220px;
+  width: 360px;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+/* line 203, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* line 212, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal-close:hover {
+  color: #f00;
+}
+
+/* line 216, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal-form > h1 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* line 222, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+.modal-form > p {
+  margin: 0 0 20px 0;
+}

@@ -10,7 +10,7 @@ const mapStateToProps = ({ errors }) => {
     errors: errors.session,
     formType: 'signup',
     linkType: '/login',
-    message: 'Already have an account? Login silly.'
+    message: 'Already have an account? Login!'
   };
 };
 

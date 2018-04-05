@@ -44,11 +44,15 @@ class LoginForm extends React.Component {
   render() {
 
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+
+      <div className="modal is-open">
+        <form onSubmit={this.handleSubmit} className="login-form-box modal-form">
+          <span className="modal-close js-modal-close">&times;</span>
           Please {this.props.formType} or
           <Link to={this.props.linkType} onClick={this.handleErrors}>{this.props.message}</Link>
-          {this.renderErrors()}
+          <div className="errors">
+            {this.renderErrors()}
+          </div>
           <div className="login-form">
             <br/>
             <label>Username:
@@ -67,9 +71,11 @@ class LoginForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+              <input className="session-submit" type="submit" value={this.props.formType} />
+              <span className="button-alternative">or <strong className="js-modal-close">Cancel</strong></span>
           </div>
         </form>
+        <div className="modal-screen js-modal-close"></div>
       </div>
     );
   }

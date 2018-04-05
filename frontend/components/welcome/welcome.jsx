@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LoginFormContainer from '../login_form/login_form_container'
+import SignupFormContainer from '../login_form/signup_form_container'
 
 const sessionLinks = () => (
   <nav className="login-signup">
     <div className="login">
       <span>Have an account?</span>
-      <Link to="/login" className="signin">Sign In</Link>
+      <Link to="/login" className="signin js-modal-open">Sign In</Link>
     </div>
     <div className="signup">
-      <Link to="/signup">Join Today</Link>
+      <Link to="/signup" className="signups js-modal-open">Join Today</Link>
     </div>
   </nav>
 );

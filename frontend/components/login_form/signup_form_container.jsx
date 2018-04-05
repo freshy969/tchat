@@ -8,7 +8,7 @@ import LoginForm from './login_form';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'Welcome Home',
+    formType: 'Create Account',
     linkType: '/login',
     message: 'Start Chatting!'
   };

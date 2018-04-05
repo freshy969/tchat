@@ -225,9 +225,10 @@ input{
 
   border-radius: 4px;
   padding: 13px;
-  width: 70%;
+  max-width: 70%;
   font-size: 15px;
   margin-bottom: 10px;
+  border: 1px solid grey;
 }
 
 .session-submit{
@@ -236,8 +237,5 @@ input{
   color: white;
   background: #3260c7;
   cursor: pointer;
-  :hover{
-    background: #4c7bd9;
-  }
 
 }

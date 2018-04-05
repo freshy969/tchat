@@ -26,7 +26,11 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user).then(this.props.clearErrors()).then(this.props.closeModal());
+  }
+
+  componentDidMount(){
+    this.handleErrors();
   }
 
   renderErrors() {
@@ -52,7 +56,7 @@ class LoginForm extends React.Component {
           </h2>
           <div className="login-form">
             <br/>
-            <label>
+            <label>Username <br></br>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -60,7 +64,7 @@ class LoginForm extends React.Component {
               />
             </label>
             <br/>
-            <label>
+            <label>Password <br></br>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -74,7 +78,6 @@ class LoginForm extends React.Component {
               <input className="session-submit" type="submit" value={this.props.message} />
           </div>
         </form>
-        <div className="modal-screen js-modal-close"></div>
       </div>
     );
   }

@@ -3,12 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: url("splash_page.jpg");
+  // https://pixabay.com/en/flower-flowerpot-vase-colorful-3175428/
+  animation: slideshow 10s linear infinite;
+  transition-duration: 0.7s;
+
+  @keyframes slideshow {
+    // https://pixabay.com/en/flower-flowerpot-vase-colorful-3175428/
+    0% {background-image: url(asset_path("splash-image1.jpg"));}
+    // https://pixabay.com/en/candy-pink-sugar-sweet-baby-blue-791314/
+    33% {background-image: url(asset_path("splash-image2.jpg"));}
+    // https://www.pexels.com/photo/two-stainless-steel-padlocks-843229/
+    66% {background-image: url(asset_path("splash-image3.jpg"));}
+    // to go back to start
+    100% {background-image: url(asset_path("splash-image1.jpg"));}
+  }
   height: 100%;
-  // background-size:     cover;
-  // background-repeat:   no-repeat;
-  background-position: center;
+  background-size:     cover;
+  background-repeat:   repeat-x;
+  background-position: center -10px;
   display: flex;
+  flex-direction: row;
+  font-size: 16px;
   background-attachment: fixed;
   color: white;
   h1 {
@@ -27,5 +42,17 @@ body {
                 -7px 7px black,
                 -8px 8px black,
                 -9px 9px black,
+  }
+  .login-signup{
+    float: right;
+    font-size: 50px;
+    margin: 50px;
+    a{
+      border-radius: 5px;
+      border: 2px solid black;
+      color: white;
+      text-decoration: none;
+
+    }
   }
 }

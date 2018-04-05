@@ -1,0 +1,115 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* line 5, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body {
+  animation: slideshow 10s linear infinite;
+  transition-duration: 0.7s;
+  height: 100%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: center -10px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  background-attachment: fixed;
+  color: white;
+}
+@keyframes slideshow {
+  0% {
+    background-image: url("/assets/splash-image1-af5b93490f27abff301b53bf4cda0dc4a2aa1b82af22dc85ac689806f33354d7.jpg");
+  }
+  33% {
+    background-image: url("/assets/splash-image2-40bd9ca1e2ba2b1b932aef9eff53af0db48cdc3543c429d2dd1bc80e61a29fd2.jpg");
+  }
+  66% {
+    background-image: url("/assets/splash-image3-f9ee0b665df11ccc9d39992d932ed0d26851088961755d1f224d43de84f8c96d.jpg");
+  }
+  100% {
+    background-image: url("/assets/splash-image1-af5b93490f27abff301b53bf4cda0dc4a2aa1b82af22dc85ac689806f33354d7.jpg");
+  }
+}
+/* line 29, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body h1 {
+  font-family: Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bolder;
+  font-size: 50px;
+  color: #fff !important;
+  text-shadow: -1px 1px black, -2px 2px black, -3px 3px black, -4px 4px black, -5px 5px black, -6px 6px black, -7px 7px black, -8px 8px black, -9px 9px black;
+}
+/* line 46, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup {
+  float: right;
+  font-size: 50px;
+  margin: 50px;
+}
+/* line 50, /Users/mattie/Documents/appacademy/tchat/tchat/app/assets/stylesheets/static_pages.scss */
+body .login-signup a {
+  border-radius: 5px;
+  border: 2px solid black;
+  color: white;
+  text-decoration: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

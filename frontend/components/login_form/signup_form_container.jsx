@@ -8,16 +8,22 @@ import LoginForm from './login_form';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'signup',
+    formType: 'Welcome Home',
     linkType: '/login',
-    message: 'Already have an account? Login!'
+    message: 'Start Chatting!'
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     processForm: (user) => dispatch(signup(user)),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    otherForm: (
+      <button onClick={() => dispatch(openModal('Sign Up'))}>
+        Login
+      </button>
+    ),
+    closeModal: () => dispatch(closeModal())
   };
 };
 

@@ -7,9 +7,9 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'Let\'s go!',
+    formType: 'Sign in',
     linkType: '/signup',
-    message: 'Don\'t have an account? Join today!'
+    message: 'Let\'s go'
   };
 };
 

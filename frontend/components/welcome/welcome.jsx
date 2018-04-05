@@ -10,9 +10,7 @@ const Welcome = ({ currentUser, logout, openModal }) => {
     <nav className="login-signup">
       <div className="login">
         <span>Have an account?</span>
-        <div className="signing">
-          <button className="signin" onClick={() => openModal('login')}>Sign in</button>
-        </div>
+        <button className="signin" onClick={() => openModal('login')}>Sign in</button>
       </div>
       <div className="signup">
         <button className="signups" onClick={() => openModal('signup')}>Join Today!</button>

@@ -47,12 +47,12 @@ class LoginForm extends React.Component {
 
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box modal-form">
-          <div onClick={this.props.closeModal} className="close-x">X</div>
-          Please {this.props.formType} or
-          <Link to={this.props.linkType} onClick={this.handleErrors}>{this.props.message}</Link>
+          <h2>
+            {this.props.formType}
+          </h2>
           <div className="login-form">
             <br/>
-            <label>Username:
+            <label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -60,7 +60,7 @@ class LoginForm extends React.Component {
               />
             </label>
             <br/>
-            <label>Password:
+            <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -71,8 +71,7 @@ class LoginForm extends React.Component {
               {this.renderErrors()}
             </div>
             <br/>
-              <input className="session-submit" type="submit" value={this.props.formType} />
-              <span className="button-alternative">or <strong className="js-modal-close">Cancel</strong></span>
+              <input className="session-submit" type="submit" value={this.props.message} />
           </div>
         </form>
         <div className="modal-screen js-modal-close"></div>

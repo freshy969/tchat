@@ -8,7 +8,7 @@ const sessionLinks = () => (
       <Link to="/login" className="signin">Sign In</Link>
     </div>
     <div className="signup">
-      <Link to="/signup">Join Today!</Link>
+      <Link to="/signup">Join Today</Link>
     </div>
   </nav>
 );

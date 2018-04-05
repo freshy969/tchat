@@ -26,7 +26,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   renderErrors() {
@@ -45,9 +45,9 @@ class LoginForm extends React.Component {
 
     return (
 
-      <div className="modal is-open">
+      <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box modal-form">
-          <span className="modal-close js-modal-close">&times;</span>
+          <div onClick={this.props.closeModal} className="close-x">X</div>
           Please {this.props.formType} or
           <Link to={this.props.linkType} onClick={this.handleErrors}>{this.props.message}</Link>
           <div className="login-form">

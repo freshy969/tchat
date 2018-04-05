@@ -11,9 +11,12 @@ body {
     // https://pixabay.com/en/flower-flowerpot-vase-colorful-3175428/
     0% {background-image: url(asset_path("splash-image1.jpg"));}
     // https://pixabay.com/en/candy-pink-sugar-sweet-baby-blue-791314/
-    33% {background-image: url(asset_path("splash-image2.jpg"));}
-    // https://www.pexels.com/photo/two-stainless-steel-padlocks-843229/
-    66% {background-image: url(asset_path("splash-image3.jpg"));}
+    25% {background-image: url(asset_path("splash-image2.jpg"));}
+    // Photo by Min An from Pexels
+    // https://www.pexels.com/photo/landscape-photography-of-pink-petaled-flowers-913416/
+    50% {background-image: url(asset_path("splash-image4.jpg"));}
+    // https://unsplash.com/photos/1GRvY9WUu08
+    75% {background-image: url(asset_path("splash-image5.jpg"));}
     // to go back to start
     100% {background-image: url(asset_path("splash-image1.jpg"));}
   }

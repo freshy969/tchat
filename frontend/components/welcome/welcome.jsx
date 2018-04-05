@@ -16,6 +16,9 @@ const Welcome = ({ currentUser, logout, openModal }) => {
       <div className="signup">
         <button className="signups" onClick={() => openModal('signup')}>Join Today!</button>
       </div>
+      <div className="demo-login">
+        <button className="demo-signin" onClick={() => openModal('login')}>Demo</button>
+      </div>
     </nav>
   );
 

@@ -8,7 +8,14 @@ import { AuthRoute} from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>Welcome To T-Chat</h1>
+      <span>tChat</span>
+      <h1>YOU DESERVE <br></br> BETTER</h1>
+      <p>On T-Chat, you’re more than just a gender. You <br></br>
+        have stories to tell, and passions to share, and <br></br>
+        things to talk about that are more interesting than <br></br>
+        the weather. Get noticed for who you are, not <br></br>
+        what you look like. Because you deserve what dating <br></br>
+        deserves: better.</p>
       <WelcomeContainer />
     </header>
     <br></br>

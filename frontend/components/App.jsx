@@ -17,6 +17,25 @@ const App = () => (
         what you look like. Because you deserve what dating <br></br>
         deserves: better.</p>
       <WelcomeContainer />
+      <form className="fakeforms">
+        <div className="fakeform">
+          <select name="sexuality">
+            <option value="valid">Valid</option>
+            <option value="beautiful">Beautiful</option>
+            <option value="fierce">Fierce</option>
+            <option value="witty">Witty</option>
+          </select>
+        </div>
+
+        <div className="fakeform">
+          <select name="gender">
+            <option value="person">Person</option>
+            <option value="person">Person</option>
+            <option value="person">Person</option>
+            <option value="person">Person</option>
+          </select>
+        </div>
+      </form>
     </header>
     <br></br>
       <AuthRoute exact path="/login" component={LoginFormContainer} />

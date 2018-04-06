@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+footer{
+  display: flex;
+  align-items: center center;
+  justify-content: space-between;
+  background: #104da1;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 150px;
+}
+
+.linkedin{
+
+  max-width: 40px;
+  max-height: 40px;
+}

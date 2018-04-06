@@ -5,6 +5,7 @@ import SignupFormContainer from './login_form/signup_form_container'
 import {Route} from 'react-router'
 import { AuthRoute} from '../util/route_util';
 import Modal from './modal/modal';
+import FooterContainer from './footer/footer_container';
 
 const App = () => (
   <div>
@@ -12,7 +13,6 @@ const App = () => (
     <header>
       <WelcomeContainer />
     </header>
-    <br></br>
   </div>
 );
 

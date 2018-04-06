@@ -21,17 +21,33 @@ html, body, #root, .page{
 }
 
 footer{
-  display: flex;
-  /* flex-direction: row; */
-  /* align-items: center center; */
   /* justify-content: space-around; */
   background: #104da1;
   height: 100px;
   width: 100%;
 }
 
-.linkedin{
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.upper-footer{
+  font-size: 19px;
+  color: #4c7bd9;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.lower-footer{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.linkedin{
   max-width: 40px;
   max-height: 40px;
+  padding: 10px;
 }

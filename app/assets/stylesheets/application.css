@@ -22,8 +22,9 @@ html, body, #root, .page{
 
 footer{
   display: flex;
-  align-items: center center;
-  justify-content: space-around;
+  /* flex-direction: row; */
+  /* align-items: center center; */
+  /* justify-content: space-around; */
   background: #104da1;
   height: 100px;
   width: 100%;

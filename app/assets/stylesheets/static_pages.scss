@@ -13,9 +13,11 @@ body {
     25% {background-image: url(asset_path("splash-image2.jpg"));}
     // Photo by Min An from Pexels
     // https://www.pexels.com/photo/landscape-photography-of-pink-petaled-flowers-913416/
-    50% {background-image: url(asset_path("splash-image4.jpg"));}
-    // https://unsplash.com/photos/1GRvY9WUu08
-    75% {background-image: url(asset_path("splash-image5.jpg"));}
+    40% {background-image: url(asset_path("splash-image4.jpg"));}
+    // https://pixabay.com/en/nature-landscape-background-3044755/
+    60% {background-image: url(asset_path("splash-image6.jpg"));}
+    // https://pixabay.com/en/flowers-nature-blossoms-stems-2607466/
+    80% {background-image: url(asset_path("splash-image7.jpg"));}
     // to go back to start
     100% {background-image: url(asset_path("splash-image1.jpg"));}
   }

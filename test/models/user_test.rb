@@ -8,6 +8,13 @@
 #  session_token   :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  screen_name     :string
+#  city            :string
+#  img_url         :string
+#  pronouns        :string
+#  age             :integer
+#  bio             :text
+#  first_date_idea :text
 #
 
 require 'test_helper'

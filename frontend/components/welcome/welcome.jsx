@@ -57,9 +57,13 @@ const Welcome = ({ currentUser, logout, openModal }) => {
 
   const personalWelcome = () => (
   	<header className="header-group">
-      <img className="navlogo" src="assets/tchat-logo.png"/>
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
+      <div className="left-nav">
+        <img className="navlogo" src="assets/tchat-logo.png"/>
+      </div>
+      <div className="right-nav">
+        <h2 className="header-name">Hi, {currentUser.username}!</h2>
+        <button className="header-button" onClick={logout}>Log Out</button>
+      </div>
   	</header>
   );
 

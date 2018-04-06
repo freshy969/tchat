@@ -23,8 +23,10 @@ html, body, #root, .page{
 footer{
   /* justify-content: space-around; */
   background: #104da1;
-  height: 100px;
+  height: 130px;
   width: 100%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .footer-content {
@@ -55,6 +57,7 @@ footer{
 .header-group{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 66px;
   background: #104da1;
   border-bottom: 1px solid hsla(0,0%,100%,.1);
@@ -65,4 +68,14 @@ footer{
   padding-left: 30px;
   max-width: 40px;
   max-height: 40px;
+}
+
+.left-nav{
+  /* justify-content: flex-start; */
+  align-self: center;
+}
+
+.right-nav{
+  /* justify-content: flex-end; */
+  align-self: center;
 }

@@ -3,11 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .splash{
-
-}
-
-body {
-
   animation: slideshow 10s linear infinite;
   transition-duration: 0.7s;
 
@@ -26,28 +21,13 @@ body {
     // to go back to start
     100% {background-image: url(asset_path("splash-image1.jpg"));}
   }
-  height: 100%;
-  background-size:     cover;
-  background-repeat:   repeat-x;
-  background-position: center -10px;
-  display: flex;
-  justify-content: space-between;
+  color: white;
+  margin-left: 0px;
   font-size: 16px;
   background-attachment: fixed;
-  color: white;
-  margin-left: 20px;
-
-  .logo{
-    font-size: 30px;
-    color: transparent;
-    -webkit-text-stroke: 2px black;
-    padding: 150px;
-    padding-top: 40px;
-    font-weight: 900;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    line-height: 70px;
-  }
-
+  background-size: 100% 100%;
+  background-position: center -10px;
+  height: 100%;
   h1 {
     -webkit-font-smoothing: antialiased;
     font-weight: 900;
@@ -60,15 +40,25 @@ body {
     line-height: 70px;
     padding-bottom: 0px;
     text-shadow: -1px 1px black,
-                -2px 2px black,
-                -3px 3px black,
-                -4px 4px black,
-                -5px 5px black,
-                -6px 6px black,
-                -7px 7px black,
-                -8px 8px black;
+    -2px 2px black,
+    -3px 3px black,
+    -4px 4px black,
+    -5px 5px black,
+    -6px 6px black,
+    -7px 7px black,
+    -8px 8px black;
   }
 
+}
+.logo{
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  padding: 150px;
+  padding-top: 40px;
+  font-weight: 900;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 70px;
 }
 
 .Description{

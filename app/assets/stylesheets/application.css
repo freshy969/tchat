@@ -14,14 +14,16 @@
  *= require_self
  */
 
-body{
+html, body, #root, .page{
   height: 100%;
+  margin: 0;
+  width: 100%;
 }
 
 footer{
   display: flex;
   align-items: center center;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #104da1;
   height: 100px;
   width: 100%;

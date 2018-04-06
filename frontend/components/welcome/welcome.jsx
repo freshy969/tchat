@@ -23,12 +23,6 @@ const Welcome = ({ currentUser, logout, openModal }) => {
           <span>Have an account?</span>
           <button className="signin" onClick={() => openModal('login')}>Sign in</button>
         </div>
-        <div className="signup">
-          <button className="signups" onClick={() => openModal('signup')}>Join Today!</button>
-        </div>
-        <div className="demo-login">
-          <button className="demo-signin" onClick={() => openModal('demo')}>Demo</button>
-        </div>
       </nav>
       <form className="fakeforms">
         <p className="your">You Are A</p>
@@ -42,15 +36,21 @@ const Welcome = ({ currentUser, logout, openModal }) => {
             </select>
           </div>
 
-        <div className="fakeform">
-          <select name="gender">
-            <option value="person">Person</option>
-            <option value="person">Person</option>
-            <option value="person">Person</option>
-            <option value="person">Person</option>
-          </select>
+          <div className="fakeform">
+            <select name="gender">
+              <option value="person">Person</option>
+              <option value="person">Person</option>
+              <option value="person">Person</option>
+              <option value="person">Person</option>
+            </select>
+          </div>
+          <div className="signup">
+            <button className="signups" onClick={() => openModal('signup')}>Join Today!</button>
+          </div>
         </div>
-      </div>
+        <div className="demo-login">
+          <button className="demo-signin" onClick={() => openModal('demo')}>Demo</button>
+        </div>
     </form>
   </div>
   );

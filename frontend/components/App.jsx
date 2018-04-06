@@ -7,10 +7,8 @@ import { AuthRoute} from '../util/route_util';
 import Footer from './footer';
 
 const App = () => (
-  <div>
-    <header>
-      <WelcomeContainer />
-    </header>
+  <div className="page">
+    <WelcomeContainer />
     <Footer />
   </div>
 );

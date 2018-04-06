@@ -53,7 +53,16 @@ footer{
 }
 
 .header-group{
+  display: flex;
+  flex-direction: row;
   height: 66px;
   background: #104da1;
   border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.navlogo{
+  padding: 15px;
+  padding-left: 30px;
+  max-width: 40px;
+  max-height: 40px;
 }

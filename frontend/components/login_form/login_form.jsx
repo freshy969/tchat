@@ -32,6 +32,12 @@ class LoginForm extends React.Component {
 
   componentDidMount(){
     this.handleErrors();
+    if(this.props.formType==="Demo"){
+      this.setState({
+        username: 'Demo',
+        password: 'password'
+      })
+    }
   }
 
   renderErrors() {
@@ -59,7 +65,7 @@ class LoginForm extends React.Component {
             <br/>
             <label>Username <br></br>
               <input type="text"
-                value={this.state.username}
+                value={this.props.username? this.props.username : this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
               />
@@ -67,7 +73,7 @@ class LoginForm extends React.Component {
             <br/>
             <label>Password <br></br>
               <input type="password"
-                value={this.state.password}
+                value={this.props.password? this.props.password : this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
               />

@@ -11,7 +11,9 @@ const mapStateToProps = ({ errors }) => {
     errors: errors.session,
     formType: 'Create Account',
     linkType: '/login',
-    message: 'Start Chatting!'
+    message: 'Start Chatting!',
+    username: '',
+    password: ''
   };
 };
 

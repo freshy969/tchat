@@ -4,15 +4,14 @@ import LoginFormContainer from './login_form/login_form_container'
 import SignupFormContainer from './login_form/signup_form_container'
 import {Route} from 'react-router'
 import { AuthRoute} from '../util/route_util';
-import Modal from './modal/modal';
-import FooterContainer from './footer/footer_container';
+import Footer from './footer';
 
 const App = () => (
   <div>
-    <Modal />
     <header>
       <WelcomeContainer />
     </header>
+    <Footer />
   </div>
 );
 

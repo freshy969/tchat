@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import { clearErrors } from '../../actions/session_actions';
 import LoginFormContainer from '../login_form/login_form_container';
 import SignupFormContainer from '../login_form/signup_form_container';
-
+import Modal from '../modal/modal';
 
 const Welcome = ({ currentUser, logout, openModal }) => {
 
   const sessionLinks = () => (
-    <div>
+    <div className="splash">
+      <Modal />
       <span className="logo">tChat</span>
       <h1>YOU DESERVE <br></br> BETTER</h1>
       <p className="Description">On T-Chat, you’re more than just a gender. You <br></br>

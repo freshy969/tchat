@@ -52,8 +52,7 @@ class Profile extends React.Component {
                 <p className="bright-answers">{this.props.currentUser.hobbies}</p>
               </div>
               <div className="looking-for">
-                <div className="boldedgirl">Looking For </div>
-                <p className="bright-answers">{this.props.currentUser.looking_for}</p>
+                <p className="bright-answers"><span className="boldedgirl">Looking For </span>{this.props.currentUser.looking_for}</p>
               </div>
             </div>
           </div>

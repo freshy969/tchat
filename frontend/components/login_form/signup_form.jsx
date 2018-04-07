@@ -6,7 +6,8 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      screen_name: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleErrors = this.handleErrors.bind(this);
@@ -62,7 +63,7 @@ class SignupForm extends React.Component {
           </h2>
           <div className="login-form">
             <br/>
-            <label>Username <br></br>
+            <label>Username
               <input type="text"
                 value={this.props.username? this.props.username : this.state.username}
                 onChange={this.update('username')}
@@ -70,10 +71,18 @@ class SignupForm extends React.Component {
               />
             </label>
             <br/>
-            <label>Password <br></br>
+            <label>Password <br/>
               <input type="password"
                 value={this.props.password? this.props.password : this.state.password}
                 onChange={this.update('password')}
+                className="login-input"
+              />
+            </label>
+            <br/>
+            <label>Screen Name <br/>
+              <input type="text"
+                value={this.props.screen_name? this.props.screen_name : this.state.screen_name}
+                onChange={this.update('screen_name')}
                 className="login-input"
               />
             </label>

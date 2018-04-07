@@ -13,7 +13,8 @@ const mapStateToProps = (state) => {
     linkType: '/login',
     message: 'Start Chatting!',
     username: '',
-    password: ''
+    password: '',
+    screen_name: ''
   };
 };
 

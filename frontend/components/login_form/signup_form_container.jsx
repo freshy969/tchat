@@ -6,9 +6,9 @@ import LoginForm from './login_form';
 import {closeModal} from '../../actions/modal_actions';
 
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = (state) => {
   return {
-    errors: errors.session,
+    errors: state.errors.session || [];
     formType: 'Create Account',
     linkType: '/login',
     message: 'Start Chatting!',

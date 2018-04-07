@@ -4,9 +4,9 @@ import { login, clearErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = (state) => {
   return {
-    errors: errors.session,
+    errors: state.errors.session || [],
     formType: 'Sign in',
     linkType: '/signup',
     message: 'Let\'s Go!',

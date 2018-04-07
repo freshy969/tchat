@@ -30,11 +30,11 @@ class User < ApplicationRecord
   validates :screen_name, length: {maximum: 20, allow_nil: true}
   validates :bio, length: {maximum: 1000, allow_nil: true}
   validates :first_date_idea, length: {maximum: 500, allow_nil: true}
-  validates :pronouns, length: {maximum: 50, allow_nil: true}
-  validates :my_anthem, length: {maximum: 50, allow_nil: true}
+  validates :pronouns, length: {maximum: 20, allow_nil: true}
+  validates :my_anthem, length: {maximum: 75, allow_nil: true}
   validates :hobbies, length: {maximum: 100, allow_nil: true}
   validates :looking_for, length: {maximum: 100, allow_nil: true}
-  validates :my_aesthetic, length: {maximum: 50, allow_nil: true}
+  validates :my_aesthetic, length: {maximum: 75, allow_nil: true}
 
   after_initialize :ensure_session_token!
 

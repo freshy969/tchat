@@ -60,7 +60,7 @@ footer{
   justify-content: space-between;
   height: 66px;
   background: #104da1;
-  border-bottom: 1px solid hsla(0,0%,100%,.1);
+  border-bottom: 1px solid hsla(0,0%,100%,.25);
 }
 
 .navlogo, .profpic{

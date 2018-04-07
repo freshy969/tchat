@@ -7,10 +7,31 @@
   height: 80vh;
   width: 100vw;
   background-color: #FFE9EC;
+  .profile{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'GT America',sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    .top-bar{
+      align-items: center;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: row;
+      background-color: #104da1;
+      .top-info{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 
   .profpicture {
     border-radius: 100%;
     width: 180px;
     height: 180px;
+    margin-right: 20px;
+    // margin-top: 100px;
   }
 }

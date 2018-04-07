@@ -7,7 +7,10 @@ class SignupForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      screen_name: ''
+      screen_name: '',
+      pronouns: '',
+      city: '',
+      age: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleErrors = this.handleErrors.bind(this);
@@ -32,12 +35,6 @@ class SignupForm extends React.Component {
 
   componentDidMount(){
     this.handleErrors();
-    if(this.props.formType==="Demo"){
-      this.setState({
-        username: 'Demo',
-        password: 'password'
-      })
-    }
   }
 
   renderErrors() {
@@ -86,6 +83,31 @@ class SignupForm extends React.Component {
                 className="login-input"
               />
             </label>
+            <br/>
+            <label>Pronouns <br/>
+              <input type="text"
+                value={this.props.pronouns? this.props.pronouns : this.state.pronouns}
+                onChange={this.update('pronouns')}
+                className="login-input"
+              />
+            </label>
+            <br/>
+            <label>City <br/>
+              <input type="text"
+                value={this.props.city? this.props.city : this.state.city}
+                onChange={this.update('city')}
+                className="login-input"
+              />
+            </label>
+            <br/>
+            <label>Age <br/>
+              <input type="number"
+                value={this.props.age? this.props.age : this.state.age}
+                onChange={this.update('age')}
+                className="login-input"
+              />
+            </label>
+            <br/>
             <div className="errors">
               {this.renderErrors()}
             </div>

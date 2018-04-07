@@ -14,7 +14,10 @@ const mapStateToProps = (state) => {
     message: 'Start Chatting!',
     username: '',
     password: '',
-    screen_name: ''
+    screen_name: '',
+    pronouns: '',
+    city: '',
+    age: ''
   };
 };
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406201241) do
+ActiveRecord::Schema.define(version: 20180407064916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 20180406201241) do
     t.integer "age"
     t.text "bio"
     t.text "first_date_idea"
+    t.string "my_aesthetic"
+    t.string "my_anthem"
+    t.string "hobbies"
+    t.string "looking_for"
     t.index ["city"], name: "index_users_on_city"
     t.index ["screen_name"], name: "index_users_on_screen_name"
     t.index ["session_token"], name: "index_users_on_session_token", unique: true

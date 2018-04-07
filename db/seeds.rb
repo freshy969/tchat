@@ -7,4 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username: "Demo", password: "password", screen_name: "goth gf", city: "Berkeley", img_url: "prof-pic1.png", pronouns: "she/her/hers", age: 22,
-bio: "Just a young girl looking for love", first_date_idea: "spoil me daddy" )
+bio: "Just a young girl dreaming of a happily ever after.", first_date_idea: "spoil me daddy", my_anthem: "Cascada - Everytime We Touch",
+hobbies: "DJ'ing, thotting_on_insta", my_aesthetic: "Small Tiddy Goth GF",
+looking_for: "Somebody to hold me tight" )

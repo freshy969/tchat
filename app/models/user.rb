@@ -15,6 +15,10 @@
 #  age             :integer
 #  bio             :text
 #  first_date_idea :text
+#  my_aesthetic    :string
+#  my_anthem       :string
+#  hobbies         :string
+#  looking_for     :string
 #
 
 # helpful info on indexing http://www.rakeroutes.com/blog/increase-rails-performance-with-database-indexes/
@@ -23,6 +27,14 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
+  validates :screen_name, length: {maximum: 20, allow_nil: true}
+  validates :bio, length: {maximum: 1000, allow_nil: true}
+  validates :first_date_idea, length: {maximum: 500, allow_nil: true}
+  validates :pronouns, length: {maximum: 50, allow_nil: true}
+  validates :my_anthem, length: {maximum: 50, allow_nil: true}
+  validates :hobbies, length: {maximum: 100, allow_nil: true}
+  validates :looking_for, length: {maximum: 100, allow_nil: true}
+  validates :my_aesthetic, length: {maximum: 50, allow_nil: true}
 
   after_initialize :ensure_session_token!
 

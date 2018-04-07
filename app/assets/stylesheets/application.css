@@ -64,10 +64,11 @@ footer{
 }
 
 .navlogo, .profpic{
-  padding: 15px;
-  padding-left: 30px;
-  max-width: 40px;
-  max-height: 40px;
+  margin: 15px;
+  margin-left: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
 }
 
 .left-nav{

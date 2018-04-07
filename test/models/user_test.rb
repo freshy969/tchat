@@ -15,6 +15,10 @@
 #  age             :integer
 #  bio             :text
 #  first_date_idea :text
+#  my_aesthetic    :string
+#  my_anthem       :string
+#  hobbies         :string
+#  looking_for     :string
 #
 
 require 'test_helper'

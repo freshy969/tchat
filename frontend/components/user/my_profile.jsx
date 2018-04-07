@@ -31,12 +31,32 @@ class Profile extends React.Component {
               </div>
             </div>
           </div>
-          <div className="bottom-part">
-            <h2 className="questions">Who am I?</h2>
-            <p className="answers">{this.props.currentUser.bio}</p>
-            <h2 className="questions">My perfect first date</h2>
-            <p className="answers">{this.props.currentUser.first_date_idea}</p>
+          <div className="bottom">
+            <div className="bottom-left">
+              <h2 className="questions">Who am I?</h2>
+              <p className="answers">{this.props.currentUser.bio}</p>
+              <h2 className="questions">My perfect first date</h2>
+              <p className="answers">{this.props.currentUser.first_date_idea}</p>
+            </div>
+            <div className="bottom-right">
+              <div className="bright-container">
+                <img className="bright-images bwhite" src="assets/painting-nails.png"/>
+                <p className="bright-answers">{this.props.currentUser.my_aesthetic}</p>
+              </div>
+              <div className="bright-container">
+                <img className="bright-images" src="assets/music-stock.png"/>
+                <p className="bright-answers">{this.props.currentUser.my_anthem}</p>
+              </div>
+              <div className="bright-container">
+                <img className="bright-images" src="assets/hobbies.png"/>
+                <p className="bright-answers">{this.props.currentUser.hobbies}</p>
+              </div>
+              <div className="looking-for">
+                <p className="bright-answers">{this.props.currentUser.looking_for}</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </header>
     )

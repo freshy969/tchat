@@ -15,11 +15,16 @@ class Profile extends React.Component {
     //   )
     // }
 
-
     return(
       <header className="profile-container">
         <div className="profile">
-          {this.props.currentUser.username}
+          <img className="profpicture" src={`assets/${this.props.currentUser.img_url}`}/>
+          {this.props.currentUser.screen_name}
+          {this.props.currentUser.city}
+          {this.props.currentUser.pronouns}
+          {this.props.currentUser.age}
+          {this.props.currentUser.bio}
+          {this.props.currentUser.first_date_idea}
         </div>
       </header>
     )

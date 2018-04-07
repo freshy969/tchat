@@ -6,9 +6,11 @@
 .profile-container {
   height: 80vh;
   width: 100vw;
-  background-color: pink;
+  background-color: #FFE9EC;
 
-  .profile {
-
+  .profpicture {
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
   }
 }

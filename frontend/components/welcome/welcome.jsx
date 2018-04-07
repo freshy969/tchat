@@ -8,11 +8,19 @@ import Modal from '../modal/modal';
 class Welcome extends React.Component{
   constructor(props) {
     super(props);
+
+    this.handleModal = this.handleModal.bind(this);
+  }
+
+  handleModal(type) {
+    return ((e) => {
+      e.preventDefault();
+      this.props.openModal(type);
+    })
   }
 
   render(){
-    console.log(this.props);
-    const { currentUser, logout, openModal } = this.props;
+    const { currentUser, logout} = this.props;
 
     return (
       <div className="splash">
@@ -28,7 +36,7 @@ class Welcome extends React.Component{
         <nav className="login-signup">
           <div className="login">
             <span>Have an account?</span>
-            <button className="signin" onClick={() => openModal('login')}>Sign in</button>
+            <button className="signin" onClick={this.handleModal('login')}>Sign in</button>
           </div>
         </nav>
         <form className="fakeforms">
@@ -52,11 +60,11 @@ class Welcome extends React.Component{
               </select>
             </div>
             <div className="signup">
-              <button className="signups" onClick={() => openModal('signup')}>Join Today!</button>
+              <button className="signups" onClick={this.handleModal('signup')}>Join Today!</button>
             </div>
           </div>
           <div className="demo-login">
-            <button className="demo-signin" onClick={() => openModal('demo')}>Demo</button>
+            <button className="demo-signin" onClick={this.handleModal('demo')}>Demo</button>
           </div>
       </form>
       </div>

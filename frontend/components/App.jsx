@@ -6,13 +6,19 @@ import NavBarContainer from './navbar/navbar_container'
 import { Route } from 'react-router'
 import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import Footer from './footer';
+import UserProfileContainer from './user/my_profile_container';
 
 const App = () => (
   <div className="page">
     <AuthRoute path="/" component={WelcomeContainer} />
-    <ProtectedRoute path="/profile" component={NavBarContainer} />
+    <ProtectedRoute path="/" component={NavBarContainer} />
+    <ProtectedRoute path="/profile" component={UserProfileContainer} />
     <Footer />
   </div>
 );
 
 export default App;
+
+
+// <ProtectedRoute exact path={`/users`} component={UserIndexContainer} />
+// <ProtectedRoute exact path={`/users/:id`} component={UserShowContainer} />

@@ -1,12 +1,11 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { requestUser } from '../../actions/user_actions';
-import User from './user';
+import Profile from './my_profile';
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = (state) => {
   return {
-    currentUser: session.currentUser,
-    userOn: 0
+    currentUser: state.session.currentUser
   };
 };
 
@@ -16,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(User);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

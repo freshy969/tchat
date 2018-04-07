@@ -53,7 +53,7 @@
       .bottom-left{
         padding-left: 280px;
         width: 510px;
-        padding-top: 45px;
+        padding-top: 30px;
         display: flex;
         flex-direction: column;
         color: black;
@@ -71,7 +71,7 @@
         }
       }
       .bottom-right{
-        padding-top: 75px;
+        padding-top: 60px;
         font-size: 17px;
         display: flex;
         flex-direction: column;
@@ -85,6 +85,7 @@
         }
         .bright-container{
           display: flex;
+          padding-bottom: 30px;
         }
 
         .bright-answers{

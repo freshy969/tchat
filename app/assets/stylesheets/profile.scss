@@ -13,17 +13,41 @@
     color: white;
     font-family: 'GT America',sans-serif;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 35px;
     .top-bar{
       align-items: center;
       padding-left: 30px;
       display: flex;
       flex-direction: row;
       background-color: #104da1;
+      height: 200px;
+      background-size: 100px 100px;
       .top-info{
+        width: 100%;
+        padding-left: 200px;
+        padding-top: 90px;
         display: flex;
         flex-direction: column;
+        .screen-name{
+          padding-bottom: 15px;
+        }
+        .top-sub-info{
+          .drama-dot{
+            color: #9dbaf2;
+            align-self: center center;
+          }
+          width: 250px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 19px;
+        }
       }
+    }
+    .bottom-part{
+      display: flex;
+      flex-direction: column;
+      color: black;
     }
   }
 
@@ -32,6 +56,8 @@
     width: 180px;
     height: 180px;
     margin-right: 20px;
+    position: absolute;
+    top: 120px;
     // margin-top: 100px;
   }
 }

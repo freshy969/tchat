@@ -24,13 +24,17 @@ class Profile extends React.Component {
               <span className="screen-name">{this.props.currentUser.screen_name}</span>
               <div className="top-sub-info">
                 <span className="age">{this.props.currentUser.age}</span>
+                <span className="drama-dot">.</span>
                 <span className="city">{this.props.currentUser.city}</span>
+                <span className="drama-dot">.</span>
                 <span className="pronouns">{this.props.currentUser.pronouns}</span>
               </div>
             </div>
           </div>
-          <span className="bio">{this.props.currentUser.bio}</span>
-          <span className="first-date-idea">{this.props.currentUser.first_date_idea}</span>
+          <div className="bottom-part">
+            <span className="bio">{this.props.currentUser.bio}</span>
+            <span className="first-date-idea">{this.props.currentUser.first_date_idea}</span>
+          </div>
         </div>
       </header>
     )

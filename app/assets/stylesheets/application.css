@@ -63,7 +63,7 @@ footer{
   border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
-.navlogo{
+.navlogo, .profpic{
   padding: 15px;
   padding-left: 30px;
   max-width: 40px;
@@ -77,5 +77,16 @@ footer{
 
 .right-nav{
   /* justify-content: flex-end; */
-  align-self: center;
+  /* align-self: center; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-button{
+  padding: 15px;
+  margin-right: 20px;
+  margin-top: 20px;
+  height: 20px;
+  align-self: center center;
+
 }

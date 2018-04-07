@@ -5,7 +5,8 @@ import User from './user';
 
 const mapStateToProps = ({ session }) => {
   return {
-    currentUser: session.currentUser
+    currentUser: session.currentUser,
+    userOn: 0
   };
 };
 

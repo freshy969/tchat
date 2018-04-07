@@ -6,7 +6,7 @@
 .profile-container {
   height: 80vh;
   width: 100vw;
-  background-color: #FFE9EC;
+  background-color: #FFF0F2;
   .profile{
     display: flex;
     flex-direction: column;
@@ -15,8 +15,8 @@
     font-weight: 300;
     font-size: 35px;
     .top-bar{
+      padding-left: 250px;
       align-items: center;
-      padding-left: 30px;
       display: flex;
       flex-direction: row;
       background-color: #104da1;
@@ -25,7 +25,7 @@
       .top-info{
         width: 100%;
         padding-left: 200px;
-        padding-top: 90px;
+        padding-top: 80px;
         display: flex;
         flex-direction: column;
         .screen-name{
@@ -34,7 +34,8 @@
         .top-sub-info{
           .drama-dot{
             color: #9dbaf2;
-            align-self: center center;
+            position: relative;
+            bottom: 5px;
           }
           width: 250px;
           display: flex;
@@ -45,9 +46,24 @@
       }
     }
     .bottom-part{
+      padding-left: 280px;
+      width: 510px;
+      padding-top: 45px;
       display: flex;
       flex-direction: column;
       color: black;
+      .questions{
+        color: #1e1e1e;
+        font-size: 19px;
+        font-weight: 500;
+        padding-top: 30px;
+      }
+      .answers{
+        color: #2a2f35;
+        padding-top: 20px;
+        font-size: 17px;
+        word-wrap: break-word;
+      }
     }
   }
 

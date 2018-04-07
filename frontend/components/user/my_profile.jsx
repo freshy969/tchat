@@ -32,8 +32,10 @@ class Profile extends React.Component {
             </div>
           </div>
           <div className="bottom-part">
-            <span className="bio">{this.props.currentUser.bio}</span>
-            <span className="first-date-idea">{this.props.currentUser.first_date_idea}</span>
+            <h2 className="questions">Who am I?</h2>
+            <p className="answers">{this.props.currentUser.bio}</p>
+            <h2 className="questions">My perfect first date</h2>
+            <p className="answers">{this.props.currentUser.first_date_idea}</p>
           </div>
         </div>
       </header>

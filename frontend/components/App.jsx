@@ -14,7 +14,7 @@ const App = () => (
     <AuthRoute path="/" component={WelcomeContainer} />
     <ProtectedRoute path="/" component={NavBarContainer} />
     <ProtectedRoute path="/profile" component={UserProfileContainer} />
-    <ProtectedRoute path="/users/:id" component={TheirProfileContainer} />
+    <ProtectedRoute path="/users/:userId" component={TheirProfileContainer} />
     <Footer />
   </div>
 );

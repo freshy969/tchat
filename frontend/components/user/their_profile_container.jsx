@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { requestUser } from '../../actions/user_actions';
-import Profile from './my_profile';
+import Profile from './their_profile';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: requestUser(state.session.currentUser)
   };
 };
 

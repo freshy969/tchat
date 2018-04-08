@@ -4,9 +4,9 @@ import { requestUser } from '../../actions/user_actions';
 import TheirProfile from './their_profile';
 
 const mapStateToProps = (state, ownProps) => {
-  const user = state.users[ownProps.match.params.userId];
+  requestUser(ownProps.match.params.userId);
   return {
-    user
+  //   user
   };
 };
 

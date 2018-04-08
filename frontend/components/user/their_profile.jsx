@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
 
-  componentDidMount() {
-    this.props.requestUser(this.props.match.params.userId)
+  constructor(props) {
+    super(props);
+    this.props.requestUser(this.props.match.params.userId);
+  }
+
+  componentWillMount() {
+    // this.props.requestUser(this.props.match.params.userId);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -14,8 +19,10 @@ class Profile extends React.Component {
   }
 
   render() {
-
-    return(
+    if (this.props.user===null){
+      return 1;
+    }
+    return (
       <header className="profile-container">
         <div className="profile">
           <div className="top-bar">

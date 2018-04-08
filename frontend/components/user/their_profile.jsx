@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-    this.props.requestSinglePokemon(this.props.match.params.pokemonId);
+    this.setState({
+      user: this.props.requestUser(this.props.match.params.userId)
+    });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.requestUser(nextProps.match.params.userId);
+    }
   }
 
   render() {

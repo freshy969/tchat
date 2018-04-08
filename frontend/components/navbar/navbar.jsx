@@ -12,7 +12,7 @@ class NavBar extends React.Component{
         <img className="navlogo" src="assets/tchat-logo.png"/>
       </div>
       <div className="right-nav">
-        <img className="profpic" src={`assets/${this.props.currentUser.img_url}`}/>
+        <img className="profpic" src={`assets/${this.props.currentUser.img_url || 'generic.jpg'}`}/>
         <button className="header-button" onClick={this.props.logout}>Log Out</button>
       </div>
     </header>

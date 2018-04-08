@@ -24,7 +24,7 @@
 # helpful info on indexing http://www.rakeroutes.com/blog/increase-rails-performance-with-database-indexes/
 
 class User < ApplicationRecord
-  validates :username, :password_digest, :session_token, presence: true
+  validates :username, :password_digest, :session_token, :pronouns, :age, :city, :screen_name, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
   validates :screen_name, length: {maximum: 20, allow_nil: true}

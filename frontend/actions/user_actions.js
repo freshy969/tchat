@@ -21,6 +21,6 @@ export const requestUser = id => dispatch => (
 
 export const requestUsers = () => dispatch => (
   USERUtil.fetchUsers().then(users => (
-    dispatch(receiveUser(user))
+    dispatch(receiveUsers(users))
   ))
 );

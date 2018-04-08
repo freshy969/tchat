@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 class Profile extends React.Component {
 
   componentDidMount() {
-    this.setState({
-      user: this.props.requestUser(this.props.match.params.userId)
-    });
+    this.props.requestUser(this.props.match.params.userId)
   }
 
   componentWillReceiveProps(nextProps) {

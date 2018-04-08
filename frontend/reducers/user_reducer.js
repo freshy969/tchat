@@ -1,11 +1,10 @@
-import { RECEIVE_USER, RECEIVE_USERS } from '../actions/user_actions';
+import { RECEIVE_USER } from '../actions/user_actions';
+import merge from 'lodash/merge';
 
 export default function userReducer(state = {}, action){
   switch(action.type){
     case RECEIVE_USER:
-      return action.user;
-    case RECEIVE_USERS:
-      return action.users;
+      return merge({}, state, action.user);
     default:
       return state;
   }

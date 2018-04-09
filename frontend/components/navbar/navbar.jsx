@@ -11,6 +11,11 @@ class NavBar extends React.Component{
     <header className="header-group">
       <div className="left-nav">
         <img className="navlogo" src="assets/tchat-logo.png"/>
+        <Link to="/users">
+          <span>
+            Brows Users
+          </span>
+        </Link>
       </div>
       <div className="right-nav">
         <Link to="/profile">

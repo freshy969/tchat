@@ -22,6 +22,7 @@ class Profile extends React.Component {
     if (this.props.user===null){
       return 1;
     }
+    if (this.props.user)
     return (
       <header className="profile-container">
         <div className="profile">

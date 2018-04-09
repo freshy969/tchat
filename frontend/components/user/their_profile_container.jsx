@@ -6,7 +6,7 @@ import values from 'lodash/values';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    user: values(state.user)
+    user: state.user
   };
 };
 

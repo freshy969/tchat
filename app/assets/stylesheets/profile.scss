@@ -132,6 +132,7 @@
 
 }
 .index-container{
+  background-color: #FFF0F2;
   width: 100%;
   .index-list{
     width: 70%;
@@ -144,21 +145,35 @@
     flex-wrap: wrap;
   }
   .user-index-link{
-    padding-right: 20px;
-    padding-bottom: 40px;
+    background: white;
+    width: 280px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    text-align: center;
     color: black;
+    border: 1px solid lightgrey;
     :hover{
       cursor: pointer;
     }
     img{
+      transition: transform .2s;
       max-width: 280px;
       max-height: 280px;
       min-width: 280px;
       min-height: 280px;
-      border-radius: 4px;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+    img:hover{
+      transform: scale(1.03);
+      max-width: 280px;
+      max-height: 280px;
+      min-width: 280px;
+      min-height: 280px;
     }
   }
 

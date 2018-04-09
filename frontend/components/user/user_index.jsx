@@ -33,7 +33,7 @@ class UserIndex extends React.Component {
       console.log(this.props.users)
       return(
         <header className="index-container">
-          <ul>
+          <ul className="index-list">
             {this.props.users.map(user => <UserIndexItem key={user.id} user={user} />)}
           </ul>
         </header>

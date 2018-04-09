@@ -132,9 +132,20 @@
 
 }
 .index-container{
-  display: flex;
-  direction: row;
+  width: 100%;
+  .index-list{
+    width: 70%;
+    padding-top: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .user-index-link{
+    padding-right: 20px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -145,6 +156,9 @@
     img{
       max-width: 280px;
       max-height: 280px;
+      min-width: 280px;
+      min-height: 280px;
+      border-radius: 4px;
     }
   }
 

@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
     linkType: '/signup',
     message: 'Let\'s Go!',
     username: '',
-    password: ''
+    password: '',
+    users: []
   };
 };
 

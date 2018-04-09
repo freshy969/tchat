@@ -10,8 +10,10 @@ class PokemonIndexItem extends React.Component{
   render(){
     return(
     <li className="user-index-item">
-      <Link to={`/users/${this.props.user.id}`} className="user-index-link">
-        <img src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
+      <div className="user-index-link">
+        <Link to={`/users/${this.props.user.id}`} className="user-index-photo">
+          <img src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
+        </Link>
         <div className="screen-name-index">
           <span>{this.props.user.screen_name}</span>
         </div>
@@ -27,7 +29,7 @@ class PokemonIndexItem extends React.Component{
         <div className="pronouns-index">
           <span>{this.props.user.pronouns}</span>
         </div>
-      </Link>
+      </div>
     </li>
   )
   }

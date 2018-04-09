@@ -158,8 +158,10 @@
     text-align: center;
     color: black;
     border: 1px solid lightgrey;
-    :hover{
-      cursor: pointer;
+    .user-index-photo{
+      :hover{
+        cursor: pointer;
+      }
     }
     .screen-name-index{
       padding-top: 25px;
@@ -173,7 +175,6 @@
       flex-direction: row;
       align-self: center;
       color: #949aa6;
-
       .age-index{
         padding-right: 5px;
       }

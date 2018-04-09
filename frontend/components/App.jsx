@@ -13,12 +13,12 @@ import TheirProfileContainer from './user/their_profile_container';
 
 const App = () => (
   <div className="page">
-    <AuthRoute path="/" component={WelcomeContainer} />
     <ProtectedRoute path="/" component={NavBarContainer} />
+    <AuthRoute path="/welcome" component={WelcomeContainer} />
     <Switch>
-      <ProtectedRoute path="/profile" component={UserProfileContainer} />
       <ProtectedRoute path="/users/:userId" component={TheirProfileContainer} />
-      <ProtectedRoute exact path="/users" component={UserIndexContainer} />
+      <ProtectedRoute path="/users" component={UserIndexContainer} />
+      <ProtectedRoute path="/" component={UserProfileContainer} />
     </Switch>
     <Footer />
   </div>

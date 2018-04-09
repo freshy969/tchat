@@ -8,7 +8,7 @@ const Auth = ({ component: Component, path, loggedIn, user, exact }) => (
     !loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to={`/profile`} />
+      <Redirect to={`/`} />
     )
   )} />
 );
@@ -18,7 +18,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
      loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/" />
+      <Redirect to="/welcome" />
     )
   )} />
 );

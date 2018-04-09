@@ -74,6 +74,22 @@ footer{
 .left-nav{
   /* justify-content: flex-start; */
   align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-nav a{
+  /* align-self: center center; */
+  padding-top: 30px;
+  padding-left: 20px;
+  color: #d6e1f9;;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.left-nav a:hover{
+  color: white;
 }
 
 .right-nav{

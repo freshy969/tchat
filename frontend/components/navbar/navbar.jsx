@@ -13,7 +13,7 @@ class NavBar extends React.Component{
         <img className="navlogo" src="assets/tchat-logo.png"/>
         <Link to="/users">
           <span>
-            Brows Users
+            Browse Users
           </span>
         </Link>
       </div>

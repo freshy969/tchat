@@ -22,17 +22,22 @@ class ProfileEdit extends React.Component {
             <img className="profpicture" src={`assets/${this.props.currentUser.img_url || 'generic.jpg'}`}/>
             <div className="top-info">
               <span className="screen-name">{this.props.currentUser.screen_name}</span>
-              <div className="top-sub-info">
-                <span className="age">{this.props.currentUser.age}</span>
-                <span className="drama-dot">.</span>
-                <span className="city">{this.props.currentUser.city}</span>
-                <span className="drama-dot">.</span>
-                <span className="pronouns">{this.props.currentUser.pronouns}</span>
+              <div className="top-sub-container">
+                <div className="top-sub-info">
+                  <span className="age">{this.props.currentUser.age}</span>
+                  <span className="drama-dot">.</span>
+                  <span className="city">{this.props.currentUser.city}</span>
+                  <span className="drama-dot">.</span>
+                  <span className="pronouns">{this.props.currentUser.pronouns}</span>
+                </div>
+                <div className="profile-nav-buttons-container">
+                  <Link to="/profile" className="profile-nav-buttons">
+                    <span>Save</span>
+                  </Link>
+                </div>
               </div>
             </div>
-            <Link to="/profile" className="profile-nav-buttons">
-              <span>Save</span>
-            </Link>
+
           </div>
           <div className="bottom">
             <div className="bottom-left">

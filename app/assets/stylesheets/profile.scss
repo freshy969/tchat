@@ -145,6 +145,8 @@
     flex-wrap: wrap;
   }
   .user-index-link{
+    display: inline-block;
+    overflow: hidden;
     background: white;
     width: 280px;
     margin-right: 20px;
@@ -159,6 +161,36 @@
     :hover{
       cursor: pointer;
     }
+    .screen-name-index{
+      padding-top: 25px;
+      padding-bottom: 10px;
+      font-weight: 500;
+      font-size: 25px;
+    }
+
+    .agenloc{
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      color: #949aa6;
+
+      .age-index{
+        padding-right: 5px;
+      }
+      .drama-dot-index{
+        span{
+          position: relative;
+          bottom: 4px;
+        }
+        padding-right: 5px;
+      }
+    }
+    .pronouns-index{
+      padding-top: 20px;
+      padding-bottom: 30px;
+      font-weight: 500;
+      font-size: 25px;
+    }
     img{
       transition: transform .2s;
       max-width: 280px;
@@ -170,10 +202,6 @@
     }
     img:hover{
       transform: scale(1.03);
-      max-width: 280px;
-      max-height: 280px;
-      min-width: 280px;
-      min-height: 280px;
     }
   }
 

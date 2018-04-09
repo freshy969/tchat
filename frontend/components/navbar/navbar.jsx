@@ -10,8 +10,10 @@ class NavBar extends React.Component{
     return (
     <header className="header-group">
       <div className="left-nav">
-        <img className="navlogo" src="assets/tchat-logo.png"/>
         <Link to="/users">
+          <img className="navlogo" src="assets/tchat-logo.png"/>
+        </Link>
+        <Link to="/users" className="browsinma">
           <span>
             Browse Users
           </span>

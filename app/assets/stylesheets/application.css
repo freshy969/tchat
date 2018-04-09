@@ -64,15 +64,19 @@ footer{
 }
 
 .navlogo, .profpic{
-  margin: 15px;
   margin-left: 30px;
   width: 42px;
   height: 42px;
   border-radius: 100%;
 }
 
+.profpic{
+  margin: 15px;
+}
+
 .left-nav{
   /* justify-content: flex-start; */
+  padding-top: 10px;
   align-self: center;
   display: flex;
   flex-direction: row;
@@ -80,7 +84,6 @@ footer{
 
 .left-nav a{
   /* align-self: center center; */
-  padding-top: 30px;
   padding-left: 20px;
   color: #d6e1f9;;
   text-decoration: none;
@@ -88,8 +91,16 @@ footer{
   font-size: 17px;
 }
 
+.browsinma{
+  padding-top: 12px;
+}
 .left-nav a:hover{
   color: white;
+}
+
+.left-nav span{
+  vertical-align: center;
+  padding-left: 20px;
 }
 
 .right-nav{

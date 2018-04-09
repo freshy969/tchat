@@ -42,6 +42,16 @@
           font-size: 19px;
         }
       }
+      .profile-nav-buttons{
+        padding: 10px;
+        border: 1px solid rgba(228,237,253,.55);
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+      }
+      .profile-nav-buttons:hover{
+        border: 1px solid rgba(228,237,253,.75);
+      }
     }
     .bottom{
       color: black;

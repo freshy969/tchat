@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Profile extends React.Component {
+class ProfileEdit extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -30,6 +30,9 @@ class Profile extends React.Component {
                 <span className="pronouns">{this.props.currentUser.pronouns}</span>
               </div>
             </div>
+            <Link to="/profile" className="profile-nav-buttons">
+              <span>Save</span>
+            </Link>
           </div>
           <div className="bottom">
             <div className="bottom-left">
@@ -63,4 +66,4 @@ class Profile extends React.Component {
   }
 }
 
-export default Profile;
+export default ProfileEdit;

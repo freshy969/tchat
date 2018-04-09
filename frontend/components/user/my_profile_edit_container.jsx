@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { requestUser } from '../../actions/user_actions';
-import Profile from './my_profile';
+import ProfileEdit from './my_profile_edit';
 
 const mapStateToProps = (state) => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileEdit);

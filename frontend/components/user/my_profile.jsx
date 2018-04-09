@@ -30,6 +30,9 @@ class Profile extends React.Component {
                 <span className="pronouns">{this.props.currentUser.pronouns}</span>
               </div>
             </div>
+            <Link to="/profile/edit" className="profile-nav-buttons">
+              <span>Edit</span>
+            </Link>
           </div>
           <div className="bottom">
             <div className="bottom-left">

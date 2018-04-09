@@ -8,6 +8,7 @@ import { Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import Footer from './footer';
 import UserProfileContainer from './user/my_profile_container';
+import UserProfileEditContainer from './user/my_profile_edit_container';
 import UserIndexContainer from './user/user_index_container';
 import TheirProfileContainer from './user/their_profile_container';
 
@@ -18,6 +19,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path="/users/:userId" component={TheirProfileContainer} />
       <ProtectedRoute path="/users" component={UserIndexContainer} />
+      <ProtectedRoute path="/profile/edit" component={UserProfileEditContainer} />
       <ProtectedRoute path="/" component={UserProfileContainer} />
     </Switch>
     <Footer />

@@ -9,7 +9,7 @@ class Profile extends React.Component {
   }
 
   componentWillUnmount() {
-    
+    this.props.removeUserState();
     // this.props.requestUser(this.props.match.params.userId);
   }
 

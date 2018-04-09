@@ -31,3 +31,7 @@ export const requestUsers = () => dispatch => (
     dispatch(receiveUsers(users))
   ))
 );
+
+export const removeUserState = () => (
+  removeUserFromState()
+)

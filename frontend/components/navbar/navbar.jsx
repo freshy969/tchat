@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component{
   constructor(props){
@@ -12,7 +13,9 @@ class NavBar extends React.Component{
         <img className="navlogo" src="assets/tchat-logo.png"/>
       </div>
       <div className="right-nav">
-        <img className="profpic" src={`assets/${this.props.currentUser.img_url || 'generic.jpg'}`}/>
+        <Link to="/profile">
+          <img className="profpic" src={`assets/${this.props.currentUser.img_url || 'generic.jpg'}`}/>
+        </Link>
         <button className="header-button" onClick={this.props.logout}>Log Out</button>
       </div>
     </header>

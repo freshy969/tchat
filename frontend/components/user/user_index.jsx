@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserIndexItem from './user_index_item';
 
-class Profile extends React.Component {
+class UserIndex extends React.Component {
 
   constructor(props) {
     super(props);
     this.props.requestUsers();
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // this.props.requestUser(this.props.match.params.userId);
+    this.props.requestUsers();
   }
 
   // componentWillReceiveProps(nextProps) {
@@ -19,19 +21,21 @@ class Profile extends React.Component {
   // }
 
   render() {
+    debugger;
     if (this.props.users===null){
       return 1;
     }
-    if (this.props.users){
+    if (this.props.users.length>=4){
       console.log(this.props.users)
       return (
         <header className="profile-container">
-          Welcome hom fam ur here ur here ur here.
-          {}
+          <ul>
+            {this.props.users.map(user => <UserIndexItem key={user.id} user={user} />)}
+          </ul>
         </header>
       )
     }
   }
 }
 
-export default Profile;
+export default UserIndex;

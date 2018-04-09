@@ -4,16 +4,21 @@ import { Link } from 'react-router-dom';
 class ProfileEdit extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      img_url: this.props.img_url,
+      screen_name: this.props.screen_name,
+      age: this.props.age,
+      city: this.props.city,
+      pronouns: this.props.pronouns,
+      bio: this.props.bio,
+      first_date_idea: this.props.first_date_idea,
+      my_aesthetic: this.props.my_aesthetic,
+      my_anthem: this.props.my_anthem,
+      looking_for: this.props.looking_for
+    };
   }
 
   render() {
-    // if !(this.props.currentUser) {
-    //   return (
-    //     <div>
-    //       Loading...
-    //     </div>
-    //   )
-    // }
 
     return(
       <header className="profile-container">

@@ -8,7 +8,8 @@ class Profile extends React.Component {
     this.props.requestUser(this.props.match.params.userId);
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
+    
     // this.props.requestUser(this.props.match.params.userId);
   }
 

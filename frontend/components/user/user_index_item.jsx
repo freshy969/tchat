@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class PokemonIndexItem extends React.Component{
+class UserIndexItem extends React.Component{
 
   constructor(props){
     super(props);
@@ -36,4 +36,4 @@ class PokemonIndexItem extends React.Component{
 
 }
 
-export default PokemonIndexItem;
+export default UserIndexItem;

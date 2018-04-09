@@ -9,9 +9,9 @@ class UserIndex extends React.Component {
     // this.props.requestUsers();
   }
 
-  // componentWillMount(){
-  //   this.props.requestUsers();
-  // }
+  componentWillMount(){
+    this.props.requestUsers();
+  }
 
   // componentDidMount() {
   //   // debugger;
@@ -26,19 +26,14 @@ class UserIndex extends React.Component {
   // }
 
   render() {
-    if (this.props.users===null){
-      return 1;
-    }
-    if (this.props.users.length>=4){
-      console.log(this.props.users)
-      return(
-        <header className="index-container">
-          <ul className="index-list">
-            {this.props.users.map(user => <UserIndexItem key={user.id} user={user} />)}
-          </ul>
-        </header>
-      )
-    }
+    console.log(this.props.users)
+    return(
+      <header className="index-container">
+        <ul className="index-list">
+          {this.props.users.map(user => <UserIndexItem key={user.id} user={user} />)}
+        </ul>
+      </header>
+    )
   }
 }
 

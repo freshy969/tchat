@@ -9,7 +9,12 @@ class UserIndex extends React.Component {
     this.props.requestUsers();
   }
 
+  // componentWillMount(){
+  //   this.props.requestUsers();
+  // }
+
   componentDidMount() {
+    // debugger;
     // this.props.requestUser(this.props.match.params.userId);
     this.props.requestUsers();
   }
@@ -21,13 +26,12 @@ class UserIndex extends React.Component {
   // }
 
   render() {
-    debugger;
     if (this.props.users===null){
       return 1;
     }
     if (this.props.users.length>=4){
       console.log(this.props.users)
-      return (
+      return(
         <header className="profile-container">
           <ul>
             {this.props.users.map(user => <UserIndexItem key={user.id} user={user} />)}

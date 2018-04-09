@@ -1,16 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PokemonIndexItem = ({ user }) => (
-  <li className="user-index-item">
-    <Link to={`/users/${user.id}`}>
-      <span>{user.screen_name}</span>
-      <img src={`assets/${user.img_url || 'generic.jpg'}`}/>
-      <span>{user.age}</span>
-      <span>{user.city}</span>
-      <span>{user.pronouns}</span>
-    </Link>
-  </li>
-);
+class PokemonIndexItem extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return(
+    <li className="user-index-item">
+      <Link to={`/users/${this.props.user.id}`}>
+        <span>{this.props.user.screen_name}</span>
+        <img src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
+        <span>{this.props.user.age}</span>
+        <span>{this.props.user.city}</span>
+        <span>{this.props.user.pronouns}</span>
+      </Link>
+    </li>
+  )
+  }
+
+}
 
 export default PokemonIndexItem;

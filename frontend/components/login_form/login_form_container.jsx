@@ -3,6 +3,7 @@ import React from 'react';
 import { login, clearErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { requestUsers } from '../../actions/user_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -24,7 +25,8 @@ const mapDispatchToProps = dispatch => {
         Signup
       </button>
     ),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    requestUsers: () => dispatch(requestUsers())
   };
 };
 

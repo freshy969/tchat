@@ -3,16 +3,15 @@ import React from 'react';
 import { requestUsers } from '../../actions/user_actions';
 import UserIndex from './user_index';
 import values from 'lodash/values';
+import { selectUsers } from '../../reducers/selectors';
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    users: state.users
-  };
-};
+const mapStateToProps = (state, ownProps) => ({
+  users: selectUsers(state)
+});
 
 const mapDispatchToProps = dispatch => {
   return {
-    requestUsers: (id) => dispatch(requestUsers(id)),
+    requestUsers: () => dispatch(requestUsers()),
   };
 };
 

@@ -28,7 +28,7 @@ class Profile extends React.Component {
       <header className="profile-container">
         <div className="profile">
           <div id="top-bar">
-            <img id="profpicture" src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
+            <img id="profpicture" src={`${this.props.user.img_url || 'generic.jpg'}`}/>
             <div id="top-sub-container">
               <div id="top-info">
                 <div id="screen-name">{this.props.user.screen_name}</div>

@@ -37,11 +37,12 @@ class ProfileEdit extends React.Component {
     console.log(this.props)
     return(
       <header className="profile-container">
+        <div className="profile-container-edit">
         <form onSubmit={this.handleSubmit}>
         <div className="profile">
           <div className="top-bar">
             <img className="profpicture" src={`assets/${this.state.img_url || 'generic.jpg'}`}/>
-            <div className="top-info">
+            <div className="top-info top-info-edit">
               <span className="screen-name">
                 <input type="string"
                   value={this.state.screen_name}
@@ -83,50 +84,60 @@ class ProfileEdit extends React.Component {
             <div className="bottom-left">
               <h2 className="questions">Bio</h2>
               <p className="answers">
-                <input type="string"
+                <textarea
                   value={this.state.bio}
+                  rows="10"
+                  cols="50"
                   onChange={this.update('bio')}
                   className="login-input"
-                  />
+                  ></textarea>
               </p>
               <h2 className="questions">First date idea</h2>
               <p className="answers">
-                <input type="string"
+                <textarea
                   value={this.state.first_date_idea}
+                  rows="10"
+                  cols="50"
                   onChange={this.update('first_date_idea')}
                   className="login-input"
-                  />
+                  ></textarea>
               </p>
             </div>
             <div className="bottom-right">
               <div className="bright-container">
                 <img className="bright-images bwhite" src="assets/painting-nails.png"/>
                 <p className="bright-answers">
-                  <input type="string"
+                  <textarea
                     value={this.state.my_aesthetic}
+                    rows="5"
+                    cols="33"
                     onChange={this.update('my_aesthetic')}
                     className="login-input"
-                    />
+                    ></textarea>
                 </p>
               </div>
               <div className="bright-container">
                 <img className="bright-images" src="assets/music-stock.png"/>
                 <p className="bright-answers">
-                  <input type="string"
+                  <textarea
                     value={this.state.my_anthem}
+                    rows="5"
+                    cols="33"
                     onChange={this.update('my_anthem')}
                     className="login-input"
-                    />
+                    ></textarea>
                 </p>
               </div>
               <div className="bright-container">
                 <img className="bright-images" src="assets/hobbies.png"/>
                 <p className="bright-answers">
-                  <input type="string"
+                  <textarea
                     value={this.state.hobbies}
+                    rows="5"
+                    cols="33"
                     onChange={this.update('hobbies')}
                     className="login-input"
-                    />
+                    ></textarea>
                 </p>
               </div>
               <div className="looking-for">
@@ -141,10 +152,11 @@ class ProfileEdit extends React.Component {
             </div>
           </div>
           <div className="profile-nav-buttons-container">
-            <input type="submit" value="Update" />
+            <input type="submit" value="Update" className="submit-prof-updates"/>
           </div>
         </div>
         </form>
+        </div>
       </header>
     )
   }

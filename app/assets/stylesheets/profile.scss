@@ -5,6 +5,20 @@
 
 .profile-container {
   background-color: #FFF0F2;
+  .profile-container-edit{
+    .profile-nav-buttons-container{
+      width: 200px;
+      align-self: center;
+      padding-bottom: 50px;
+      :hover{
+        cursor: pointer;
+        background: lightgrey;
+      }
+    }
+    textarea{
+      font-size: 17px;
+    }
+  }
   .profile{
     display: flex;
     flex-direction: column;
@@ -20,6 +34,13 @@
       background-color: #104da1;
       height: 200px;
       background-size: 100px 100px;
+      .top-info-edit{
+        padding-bottom: 70px;
+        .drama-dot{
+          position: relative;
+          top: 7px;
+        }
+      }
       .top-info{
         width: 100%;
         padding-left: 200px;

@@ -33,7 +33,7 @@ class User < ApplicationRecord
   validates :pronouns, length: {maximum: 20, allow_nil: true}
   validates :my_anthem, length: {maximum: 75, allow_nil: true}
   validates :hobbies, length: {maximum: 100, allow_nil: true}
-  validates :looking_for, length: {maximum: 100, allow_nil: true}
+  validates :looking_for, length: {maximum: 50, allow_nil: true}
   validates :my_aesthetic, length: {maximum: 75, allow_nil: true}
 
   after_initialize :ensure_session_token!

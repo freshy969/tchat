@@ -57,7 +57,17 @@ class ProfileEdit extends React.Component {
         <form onSubmit={this.handleSubmit}>
         <div className="profile">
           <div className="top-bar">
-            <img className="profpicture" src={`assets/${this.state.img_url || 'generic.jpg'}`}/>
+            <div className="edit-pic">
+              <img className="profpicture" src={`assets/${this.state.img_url || 'generic.jpg'}`}/>
+                <div className="button-holder">
+                <button
+                  onClick={this.handleCloudinary}
+                  className="new-profpic-button"
+                >
+                  Add image
+                </button>
+              </div>
+            </div>
             <div className="top-info top-info-edit">
               <span className="screen-name">
                 <input type="string"

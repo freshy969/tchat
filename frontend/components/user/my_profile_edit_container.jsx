@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { requestUser } from '../../actions/user_actions';
+import { requestUser, updateUser } from '../../actions/user_actions';
 import ProfileEdit from './my_profile_edit';
 
 const mapStateToProps = (state) => {
@@ -23,6 +23,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     requestUser: (user) => dispatch(requestUser(id)),
+    updateUser: (user) => dispatch(updateUser(user))
   };
 };
 

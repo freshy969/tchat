@@ -17,6 +17,7 @@ class ProfileEdit extends React.Component {
       hobbies: this.props.hobbies,
       looking_for: this.props.looking_for
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -25,10 +26,17 @@ class ProfileEdit extends React.Component {
     });
   }
 
+  handleSubmit(e){
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.updateUser(user);
+  }
+
   render() {
     console.log(this.props)
     return(
       <header className="profile-container">
+        <form onSubmit={this.handleSubmit}></form>
         <div className="profile">
           <div className="top-bar">
             <img className="profpicture" src={`assets/${this.state.img_url || 'generic.jpg'}`}/>

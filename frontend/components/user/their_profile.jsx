@@ -27,21 +27,21 @@ class Profile extends React.Component {
     return (
       <header className="profile-container">
         <div className="profile">
-          <div className="top-bar">
-            <img className="profpicture" src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
-            <div className="top-sub-container">
-              <div className="top-info">
-                <span className="screen-name">{this.props.user.screen_name}</span>
-                <div className="top-sub-info">
-                  <span className="age">{this.props.user.age}</span>
-                  <span className="drama-dot">.</span>
-                  <span className="city">{this.props.user.city}</span>
-                  <span className="drama-dot">.</span>
-                  <span className="pronouns">{this.props.user.pronouns}</span>
+          <div id="top-bar">
+            <img id="profpicture" src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
+            <div id="top-sub-container">
+              <div id="top-info">
+                <div id="screen-name">{this.props.user.screen_name}</div>
+                <div id="top-sub-info">
+                  <span id="age">{this.props.user.age}</span>
+                  <span id="drama-dot">.</span>
+                  <span id="city">{this.props.user.city}</span>
+                  <span id="drama-dot">.</span>
+                  <span id="pronouns">{this.props.user.pronouns}</span>
                 </div>
               </div>
-              <div className="profile-nav-buttons-container">
-                <Link to="/profile/edit" className="profile-nav-buttons">
+              <div id="profile-nav-buttons-container">
+                <Link to="/profile/edit" id="profile-nav-buttons">
                   <span>Edit</span>
                 </Link>
               </div>

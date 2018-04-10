@@ -27,9 +27,9 @@ class ProfileEdit extends React.Component {
   }
 
   handleSubmit(e){
+    debugger;
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.updateUser(user);
+    this.props.updateUser(this.state);
   }
 
   render() {
@@ -73,9 +73,6 @@ class ProfileEdit extends React.Component {
                       className="login-input"
                       />
                   </span>
-                </div>
-                <div className="profile-nav-buttons-container">
-                  <input type="submit" value="Update" />
                 </div>
               </div>
             </div>
@@ -142,7 +139,9 @@ class ProfileEdit extends React.Component {
               </div>
             </div>
           </div>
-
+          <div className="profile-nav-buttons-container">
+            <input type="submit" value="Update" />
+          </div>
         </div>
         </form>
       </header>

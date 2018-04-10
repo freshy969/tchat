@@ -20,6 +20,7 @@ class ProfileEdit extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.handleCloudinary = this.handleCloudinary.bind(this);
   }
 
   update(field) {
@@ -32,6 +33,16 @@ class ProfileEdit extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.updateUser(user).then(() => this.props.history.push('/profile'));
+  }
+
+  handleCloudinary(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(window.cloudinary_options, (error, results) => {
+      if(error)
+        console.log(error);
+      else
+        this.setState({ img_url: results[0].secure_url });
+    });
   }
 
   // componentWillUnmount(){

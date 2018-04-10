@@ -6,6 +6,10 @@ class Profile extends React.Component {
     super(props);
   }
 
+  // componentWillMount(){
+  //   this.props.requestUser(this.state.session.c);
+  // }
+
   render() {
     // if !(this.props.currentUser) {
     //   return (

@@ -18,7 +18,9 @@ export const removeUserFromState = () => ({
   type: REMOVE_USER_FROM_STATE,
 });
 
-
+export const updateUser = user => dispatch => (
+  USERUtil.updateUser(user).then(user => dispatch(receiveUser(user)))
+);
 
 export const requestUser = id => dispatch => (
   USERUtil.fetchUser(id).then(user => (

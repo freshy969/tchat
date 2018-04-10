@@ -18,6 +18,7 @@ class ProfileEdit extends React.Component {
       looking_for: this.props.looking_for
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   update(field) {
@@ -27,9 +28,9 @@ class ProfileEdit extends React.Component {
   }
 
   handleSubmit(e){
-    debugger;
     e.preventDefault();
-    this.props.updateUser(this.state);
+    const user = Object.assign({}, this.state);
+    this.props.updateUser(user);
   }
 
   render() {

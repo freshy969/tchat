@@ -36,7 +36,7 @@ class ProfileEdit extends React.Component {
     console.log(this.props)
     return(
       <header className="profile-container">
-        <form onSubmit={this.handleSubmit}></form>
+        <form onSubmit={this.handleSubmit}>
         <div className="profile">
           <div className="top-bar">
             <img className="profpicture" src={`assets/${this.state.img_url || 'generic.jpg'}`}/>
@@ -53,9 +53,7 @@ class ProfileEdit extends React.Component {
                   <span className="pronouns">{this.state.pronouns}</span>
                 </div>
                 <div className="profile-nav-buttons-container">
-                  <Link to="/profile" className="profile-nav-buttons">
-                    <span>Save</span>
-                  </Link>
+                  <input type="submit" value="Update" />
                 </div>
               </div>
             </div>
@@ -88,6 +86,7 @@ class ProfileEdit extends React.Component {
           </div>
 
         </div>
+        </form>
       </header>
     )
   }

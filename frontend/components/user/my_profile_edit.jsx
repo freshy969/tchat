@@ -5,17 +5,17 @@ class ProfileEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      img_url: this.props.img_url,
-      screen_name: this.props.screen_name,
-      age: this.props.age,
-      city: this.props.city,
-      pronouns: this.props.pronouns,
-      bio: this.props.bio,
-      first_date_idea: this.props.first_date_idea,
-      my_aesthetic: this.props.my_aesthetic,
-      my_anthem: this.props.my_anthem,
-      hobbies: this.props.hobbies,
-      looking_for: this.props.looking_for
+      img_url: this.props.user.img_url,
+      screen_name: '',
+      age: '',
+      city: '',
+      pronouns: '',
+      bio: '',
+      first_date_idea: '',
+      my_aesthetic: '',
+      my_anthem: '',
+      hobbies: '',
+      looking_for: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -42,7 +42,11 @@ class ProfileEdit extends React.Component {
             <img className="profpicture" src={`assets/${this.state.img_url || 'generic.jpg'}`}/>
             <div className="top-info">
               <span className="screen-name">
-                {this.state.screen_name}
+                <input type="string"
+                  value={this.props.screen_name? this.props.screen_name : this.state.screen_name}
+                  onChange={this.update('age')}
+                  className="login-input"
+                />
               </span>
               <div className="top-sub-container">
                 <div className="top-sub-info">

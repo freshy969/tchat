@@ -30,8 +30,12 @@ class ProfileEdit extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.updateUser(user);
+    this.props.updateUser(user).then(() => this.props.history.push('/profile'));
   }
+
+  // componentWillUnmount(){
+  //   this.props.requestUser(this.props.id);
+  // }
 
   render() {
     console.log(this.props)

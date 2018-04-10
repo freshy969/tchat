@@ -93,6 +93,9 @@ class SignupForm extends React.Component {
             </label>
             <br/>
             <label>City <br/>
+              <div className="fakeforms">
+              <div className="forms">
+              <div className="fakeform">
               <select value={this.props.city? this.props.city : this.state.city} onChange={this.update('city')} className="login-input">
                 <option value="Bay Area">Bay Area</option>
                 <option value="LA">LA</option>
@@ -100,6 +103,9 @@ class SignupForm extends React.Component {
                 <option value="DC">DC</option>
                 <option value="Miami">Miami</option>
               </select>
+              </div>
+              </div>
+            </div>
             </label>
             <br/>
             <label>Age <br/>

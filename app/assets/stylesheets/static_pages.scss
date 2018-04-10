@@ -255,3 +255,22 @@ button.demo-signin:hover{
   background-color: rgba(0,255,0,.7);
   cursor: pointer;
 }
+
+.login-form-container{
+  .fakeforms{
+    align-items: center;
+    .forms{
+      align-self: center;
+      width: 100%;
+      height: 100%;
+      .fakeform{
+        margin-right: 50px;
+        .login-input{
+          width: 100%;
+          padding-right: 100px;
+        }
+      }
+    }
+  }
+
+}

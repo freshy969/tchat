@@ -1,4 +1,5 @@
 import * as USERUtil from '../util/user_api_util';
+import {receiveCurrentUser} from './session_actions';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_USERS = 'RECEIVE_USERS';
@@ -19,7 +20,7 @@ export const removeUserFromState = () => ({
 });
 
 export const updateUser = user => dispatch => (
-  USERUtil.updateUser(user).then(user => dispatch(receiveUser(user)))
+  USERUtil.updateUser(user).then(user => dispatch(receiveCurrentUser(user)))
 );
 
 export const requestUser = id => dispatch => (

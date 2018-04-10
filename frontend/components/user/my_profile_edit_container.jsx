@@ -7,7 +7,7 @@ import ProfileEdit from './my_profile_edit';
 const mapStateToProps = (state) => {
   return {
     id: state.session.currentUser.id,
-    img_url: '',
+    img_url: state.session.currentUser.img_url,
     screen_name: state.session.currentUser.screen_name,
     age: state.session.currentUser.age,
     city: state.session.currentUser.city,

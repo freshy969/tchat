@@ -15,7 +15,8 @@ class ProfileEdit extends React.Component {
       my_aesthetic: this.props.my_aesthetic,
       my_anthem: this.props.my_anthem,
       hobbies: this.props.hobbies,
-      looking_for: this.props.looking_for
+      looking_for: this.props.looking_for,
+      img_url: this.props.img_url
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);

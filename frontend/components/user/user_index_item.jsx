@@ -12,7 +12,7 @@ class UserIndexItem extends React.Component{
     <li className="user-index-item">
       <div className="user-index-link">
         <Link to={`/users/${this.props.user.id}`} className="user-index-photo">
-          <img src={`${this.props.user.img_url || 'generic.jpg'}`}/>
+          <img src={`${this.props.user.img_url || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}`}/>
         </Link>
         <div className="screen-name-index">
           <span>{this.props.user.screen_name}</span>

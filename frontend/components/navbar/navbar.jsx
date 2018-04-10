@@ -21,7 +21,7 @@ class NavBar extends React.Component{
       </div>
       <div className="right-nav">
         <Link to="/profile">
-          <img className="profpic" src={`${this.props.currentUser.img_url || 'generic.jpg'}`}/>
+          <img className="profpic" src={`${this.props.currentUser.img_url || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}`}/>
         </Link>
         <button className="header-button" onClick={this.props.logout}>Log Out</button>
       </div>

@@ -58,7 +58,7 @@ class ProfileEdit extends React.Component {
         <div className="profile">
           <div className="top-bar">
             <div className="edit-pic">
-              <img className="profpicture" src={`${this.state.img_url || 'generic.jpg'}`}/>
+              <img className="profpicture" src={`${this.state.img_url || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}`}/>
               <div className="button-holder">
                 <button
                   onClick={this.handleCloudinary}

@@ -2,6 +2,20 @@ import values from 'lodash/values';
 
 // export const selectUsers = state => values(state.users);
 
+// fisher-yates shuffle
+function shuffle (array) {
+  let i = 0;
+  let j = 0
+  let temp = null
+
+  for (i = array.length - 1; i > 0; i -= 1) {
+    j = Math.floor(Math.random() * (i + 1))
+    temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
+}
+
 export const selectUsers = state => {
   let result = [];
   for (let id in state.users){
@@ -11,5 +25,6 @@ export const selectUsers = state => {
       }
     }
   }
+  shuffle(result);
   return result;
 };

@@ -93,11 +93,13 @@ class SignupForm extends React.Component {
             </label>
             <br/>
             <label>City <br/>
-              <input type="text"
-                value={this.props.city? this.props.city : this.state.city}
-                onChange={this.update('city')}
-                className="login-input"
-              />
+              <select value={this.props.city? this.props.city : this.state.city} onChange={this.update('city')} className="login-input">
+                <option value="Bay Area">Bay Area</option>
+                <option value="LA">LA</option>
+                <option value="NY">NY</option>
+                <option value="DC">DC</option>
+                <option value="Miami">Miami</option>
+              </select>
             </label>
             <br/>
             <label>Age <br/>

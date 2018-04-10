@@ -29,14 +29,21 @@ class Profile extends React.Component {
         <div className="profile">
           <div className="top-bar">
             <img className="profpicture" src={`assets/${this.props.user.img_url || 'generic.jpg'}`}/>
-            <div className="top-info">
-              <span className="screen-name">{this.props.user.screen_name}</span>
-              <div className="top-sub-info">
-                <span className="age">{this.props.user.age}</span>
-                <span className="drama-dot">.</span>
-                <span className="city">{this.props.user.city}</span>
-                <span className="drama-dot">.</span>
-                <span className="pronouns">{this.props.user.pronouns}</span>
+            <div className="top-sub-container">
+              <div className="top-info">
+                <span className="screen-name">{this.props.user.screen_name}</span>
+                <div className="top-sub-info">
+                  <span className="age">{this.props.user.age}</span>
+                  <span className="drama-dot">.</span>
+                  <span className="city">{this.props.user.city}</span>
+                  <span className="drama-dot">.</span>
+                  <span className="pronouns">{this.props.user.pronouns}</span>
+                </div>
+              </div>
+              <div className="profile-nav-buttons-container">
+                <Link to="/profile/edit" className="profile-nav-buttons">
+                  <span>Edit</span>
+                </Link>
               </div>
             </div>
           </div>

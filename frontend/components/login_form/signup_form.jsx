@@ -61,6 +61,7 @@ class SignupForm extends React.Component {
           <div className="login-form">
             <br/>
             <label>Username
+              <br/>
               <input type="text"
                 value={this.props.username? this.props.username : this.state.username}
                 onChange={this.update('username')}

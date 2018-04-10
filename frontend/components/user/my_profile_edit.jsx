@@ -65,11 +65,13 @@ class ProfileEdit extends React.Component {
                   </span>
                   <span className="drama-dot">.</span>
                   <span className="city">
-                    <input type="string"
-                      value={this.state.city}
-                      onChange={this.update('city')}
-                      className="login-input"
-                      />
+                    <select value={this.state.city} onChange={this.update('city')} className="login=input">
+                      <option value="Bay Area">Bay Area</option>
+                      <option value="LA">LA</option>
+                      <option value="NY">NY</option>
+                      <option value="DC">DC</option>
+                      <option value="Miami">Miami</option>
+                    </select>
                   </span>
                   <span className="drama-dot">.</span>
                   <span className="pronouns">

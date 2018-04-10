@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login_user!(@user)
-      render: '/api/users/show'
+      render '/api/users/show'
     else
       render json: ["Your info was incorrect. Try again."], status: 401
     end
@@ -22,5 +22,5 @@ class Api::SessionsController < ApplicationController
     else
       render json: ["Nobody signed in"], status: 404
     end
-  end\
+  end
 end

@@ -3,6 +3,7 @@ import React from 'react';
 import { login, clearErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { requestMessages, requestMessagethreads} from '../../actions/message_actions';
 
 const mapStateToProps = ({ errors }) => {
   return {
@@ -25,7 +26,9 @@ const mapDispatchToProps = dispatch => {
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    requestUsers: () => dispatch(requestUsers())
+    requestUsers: () => dispatch(requestUsers()),
+    requestMessages: () => dispatch(requestMessages()),
+    requestMessagethreads: () => dispatch(requestMessagethreads())
   };
 };
 

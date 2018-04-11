@@ -1,26 +1,26 @@
 import * as MESSAGEUtil from '../util/message_api_util';
 
-export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
-export const RECEIVE_MESSAGETHREAD = 'RECEIVE_MESSAGETHREAD';
-export const REMOVE_MESSAGE_FROM_STATE = 'REMOVE_MESSAGE_FROM_STATE';
+export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGE';
+export const RECEIVE_MESSAGETHREADS = 'RECEIVE_MESSAGETHREAD';
+export
 
-export const receiveMessage = message => ({
-  type: RECEIVE_MESSAGE,
-  message
-});
-
-export const receiveMessagethread = messagethread => ({
-  type: RECEIVE_MESSAGETHREAD,
+export const receiveMessagethreads = messagethread => ({
+  type: RECEIVE_MESSAGETHREADS,
   messagethread
 });
 
-export const requestMessage = id => dispatch => (
+export const receiveMessages = messages => ({
+  type: RECEIVE_MESSAGES,
+  messages
+});
+
+export const requestMessages = () => dispatch => (
   MESSAGEUtil.fetchMessage(id).then(message=>(
     dispatch(receiveMessage(message))
   ))
 );
 
-export const requestMessagethread = id => dispatch => (
+export const requestMessagethreads = () => dispatch => (
   MESSAGEUtil.fetchMessagethread(id).then(messagethread=>(
     dispatch(receiveMessagethread(messagethread))
   ))

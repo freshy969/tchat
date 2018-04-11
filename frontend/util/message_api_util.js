@@ -17,7 +17,7 @@ export const fetchMessages = () => (
     method: 'GET',
     url: '/api/messages'
   })
-)
+);
 
 export const fetchMessage = (id) => (
   $.ajax({

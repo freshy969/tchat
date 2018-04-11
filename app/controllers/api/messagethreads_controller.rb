@@ -1,9 +1,9 @@
 class Api::MessagethreadsController < ApplicationController
   def create
-    @messagethread = Messagethread.new(messagethread_params)
-    if @messagethread.save
-      render: api_messagethread_url(@messagethread)
-    else
+    # @messagethread = Messagethread.new(messagethread_params)
+    # if @messagethread.save
+    #   render: api_messagethread_url(@messagethread)
+    # else
   end
 
   def show

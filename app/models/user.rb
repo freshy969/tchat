@@ -36,6 +36,36 @@ class User < ApplicationRecord
   validates :looking_for, length: {maximum: 50, allow_nil: true}
   validates :my_aesthetic, length: {maximum: 75, allow_nil: true}
 
+  has_many :messagethreads_initiated,
+    class_name: :Messagethread,
+    primary_key: :id,
+    foreign_key: :initiator_id
+
+  has_many :messagethreads_received,
+    class_name: :Messagethread,
+    primary_key: :id,
+    foreign_key: :receiver_id
+
+  has_many :users_messaged,
+    through: :messagethreads_initiated,
+    source: :receiver
+
+  has_many :users_messaging,
+    through: :messagethreads_received,
+    source: :initiator
+
+  has_many :sent_messages,
+    class_name: :Message,
+    primary_key: :id,
+    foreign_key: :sender_id
+
+  has_many :received_messages,
+    class_name: :Message,
+    primary_key: :id,
+    foreign_key: :sender_id
+
+
+
   after_initialize :ensure_session_token!
 
   attr_reader :password

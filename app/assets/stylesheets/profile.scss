@@ -24,7 +24,48 @@
       font-size: 17px;
     }
     .button-holder{
-      position: absolute;
+      p{
+        z-index: 5;
+        top: 40px;
+        position: relative;
+        left: 85px;
+        // background-color: transparent;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      img{
+        // z-index: -4;
+      }
+      opacity: .9999;
+      background-color: none;
+      :focus{
+        border: none;
+      }
+    }
+    button{
+      background: none;
+      color: transparent;
+      padding: 0px;
+      border: none;
+      border-width: none;
+    }
+    .edit-pic{
+      :hover{
+        cursor: pointer;
+        opacity: 0.7;
+        // z-index: -1;
+      }
+      p{
+        font-size: 20px;
+        color: black;
+        background: rgba(255,240,245,.9);
+      }
+      p:hover{
+        cursor: pointer;
+      }
+      p:focus{
+        border: none;
+      }
     }
   }
   .profile{

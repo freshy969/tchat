@@ -26,6 +26,8 @@ class LoginForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.requestUsers();
+    this.props.requestMessagethreads();
+    this.props.requestMessages();
     this.props.processForm(user).then(()=>this.props.closeModal())
   }
 

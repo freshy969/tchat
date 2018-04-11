@@ -2,11 +2,10 @@ import * as MESSAGEUtil from '../util/message_api_util';
 
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGE';
 export const RECEIVE_MESSAGETHREADS = 'RECEIVE_MESSAGETHREAD';
-export
 
-export const receiveMessagethreads = messagethread => ({
+export const receiveMessagethreads = messagethreads => ({
   type: RECEIVE_MESSAGETHREADS,
-  messagethread
+  messagethreads
 });
 
 export const receiveMessages = messages => ({
@@ -15,13 +14,13 @@ export const receiveMessages = messages => ({
 });
 
 export const requestMessages = () => dispatch => (
-  MESSAGEUtil.fetchMessage(id).then(message=>(
-    dispatch(receiveMessage(message))
+  MESSAGEUtil.fetchMessages().then(messages=>(
+    dispatch(receiveMessages(messages))
   ))
 );
 
 export const requestMessagethreads = () => dispatch => (
-  MESSAGEUtil.fetchMessagethread(id).then(messagethread=>(
-    dispatch(receiveMessagethread(messagethread))
+  MESSAGEUtil.fetchMessagethreads().then(messagethreads=>(
+    dispatch(receiveMessagethreads(messagethreads))
   ))
 );

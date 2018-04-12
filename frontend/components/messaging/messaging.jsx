@@ -22,7 +22,6 @@ class Messaging extends React.Component {
   // }
 
   render() {
-    console.log(this.props);
     return(
       <header className="message-container">
         <div className="messagethread-index-container">

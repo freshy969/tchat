@@ -8,9 +8,13 @@ class MessageIndexItem extends React.Component{
   }
 
   render(){
+    console.log(this.props);
     return(
-    <div className="message-index-item">
-      {this.props.message.message}
+    <div className="message-index-item-container">
+      <div className={this.props.currentUserId===this.props.message.sender_id? "Message-Sender" : "Message-Receiver"}>
+        {this.props.message.message}
+
+      </div>
     </div>
     )
   }

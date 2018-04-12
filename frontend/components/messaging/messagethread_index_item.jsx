@@ -21,7 +21,10 @@ class MessagethreadIndexItem extends React.Component{
       </div>
       <div className="messagethread-index-right">
         <div className="messagethread-index-topright">
-          <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_name : this.props.messagethread.initiator_name} | {this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_pronouns : this.props.messagethread.initiator_pronouns}</span>
+          <div className="toprightleftindexthreadlol">
+            <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_name : this.props.messagethread.initiator_name} </span>
+            <span className="toprightleftlolpnouns">{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_pronouns : this.props.messagethread.initiator_pronouns}</span>
+          </div>
           <span className="mthreadindexlast">{this.props.messagethread.last_message_sent}</span>
         </div>
         <div className="messagethread-index-bottomright">

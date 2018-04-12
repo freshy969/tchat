@@ -28,3 +28,13 @@ export const selectUsers = state => {
   shuffle(result);
   return result;
 };
+
+export const selectMessagethreads = state => {
+  let result = [];
+  for (let id in state.messagethreads){
+    if (state.messagethreads[id].initiator_id === state.session.currentUser.id || state.messagethreads[id].receiver_id === state.session.currentUser.id){
+      result.push(state.messagethreads[id]);
+    }
+  }
+  return result;
+};

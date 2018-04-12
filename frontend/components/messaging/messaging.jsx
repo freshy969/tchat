@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import UserIndexItem from './user_index_item';
+import MessagethreadIndexItem from './messagethread_index_item';
 
 class Messaging extends React.Component {
 
@@ -14,11 +14,10 @@ class Messaging extends React.Component {
   }
 
   render() {
-    console.log(this.props.users)
     return(
       <header className="message-container">
         <div className="message-index-container">
-          Placeholder
+          {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem key={messagethread.id} messagethread={messagethread} />)}
         </div>
 
         <div className="featured-message-container">

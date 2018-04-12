@@ -17,7 +17,7 @@ class Messaging extends React.Component {
     return(
       <header className="message-container">
         <div className="message-index-container">
-          {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem key={messagethread.id} messagethread={messagethread} />)}
+          {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem currentUserId={this.props.currentUser.id} key={messagethread.id} messagethread={messagethread} />)}
         </div>
 
         <div className="featured-message-container">

@@ -8,10 +8,17 @@ class MessagethreadIndexItem extends React.Component{
   }
 
   render(){
+    console.log(this.props);
     return(
     <li className="messagethread-index-item">
       <div className="messagethread-index-link">
-        testing testing 1 2 testing
+        <img src={`${this.props.messagethread.receiver_profpic || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}`}/>
+        <br/>
+        <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_name : this.props.messagethread.initiator_name}</span>
+        <br/>
+        <span>{this.props.messagethread.last_message}</span>
+        <br/>
+        <span>{this.props.messagethread.last_message_sent}</span>
       </div>
     </li>
   )

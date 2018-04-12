@@ -78,8 +78,7 @@
     border: 1px solid lightgrey;
     border-radius: 5px;
     .messages-topcontainer{
-      // align-self: center;
-      height: 15vh;
+      height: 20%;
       background-color: white;
       border-bottom: 1px solid lightgrey;
       display: flex;
@@ -108,7 +107,7 @@
     }
     .message-middlecontainer{
       width: inherit;
-      align-self: center;
+      height: 60%;
       margin-left: 10px;
       margin-right: 10px;
       flex-direction: column;
@@ -141,7 +140,16 @@
       }
     }
     .message-bottomcontainer{
+      border-top: 1px solid lightgrey;
       justify-content: flex-end;
+      height: 20%;
+      textarea{
+        resize: none;
+        margin-top: 2%;
+        margin-left: 5%;
+        width: 90%;
+        margin-right: 5%;
+      }
     }
 
   }

@@ -30,3 +30,9 @@ export const requestMessagethreads = () => dispatch => (
     dispatch(receiveMessagethreads(messagethreads))
   ))
 );
+
+export const postNewMessage = (message) => dispatch => (
+  MESSAGEUtil.postMessage(message).then(message => (
+    dispatch(requestMessages())
+  ))
+);

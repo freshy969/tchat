@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => {
   return {
     requestMessages: () => dispatch(requestMessages()),
     requestMessagethreads: () => dispatch(requestMessagethreads()),
-    receiveCurrentMessagethreadId: () => dispatch(receiveCurrentMessagethreadId())
+    receiveCurrentMessagethreadId: () => dispatch(receiveCurrentMessagethreadId()),
+    postNewMessage: (message) => dispatch(postNewMessage(message))
   };
 };
 

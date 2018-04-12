@@ -65,7 +65,8 @@ class Messaging extends React.Component {
                 cols="33"
                 onChange={this.update("message")}
                 className="new-message"
-                ></textarea>
+              ></textarea>
+              <input type="submit" value="Send" className="send-new-message"/>
             </form>
           </div>
         </div>

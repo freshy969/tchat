@@ -6,5 +6,6 @@ class Api::MessagesController < ApplicationController
   end
 
   def index
+    @messages = Message.all
   end
 end

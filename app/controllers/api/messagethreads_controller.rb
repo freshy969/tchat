@@ -10,6 +10,7 @@ class Api::MessagethreadsController < ApplicationController
   end
 
   def index
+    @messagethreads = Messagethread.all
   end
 
   private

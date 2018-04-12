@@ -55,3 +55,27 @@ User.create(username: "test9", password: "password", screen_name: "Looking", cit
 bio: "In Miami for the weekend looking for some qt's to party with!!!", first_date_idea: "ayyyyy lets party yo", my_anthem: "Soft Rock",
 hobbies: "I love thrifting", my_aesthetic: "Trashy",
 looking_for: "A fun weekend" )
+
+Messagethread.create(initiator_id: 1, receiver_id: 2)
+Message.create(sender_id: 1, receiver_id: 2, message_thread_id: 1, message: "hey what's up")
+Message.create(sender_id: 2, receiver_id: 1, message_thread_id: 1, message: "not much u?")
+Message.create(sender_id: 1, receiver_id: 2, message_thread_id: 1, message: "ugh so much life sucks")
+Message.create(sender_id: 1, receiver_id: 2, message_thread_id: 1, message: "I wish I was with you rn")
+
+Messagethread.create(initiator_id: 1, receiver_id: 3)
+Message.create(sender_id: 1, receiver_id: 3, message_thread_id: 2, message: "lets hang")
+Message.create(sender_id: 3, receiver_id: 1, message_thread_id: 2, message: "ooooh what should we do")
+Message.create(sender_id: 3, receiver_id: 1, message_thread_id: 2, message: "should we go for dinner")
+Message.create(sender_id: 3, receiver_id: 1, message_thread_id: 2, message: "or hang immediately cutie")
+
+Messagethread.create(initiator_id: 4, receiver_id: 1)
+Message.create(sender_id: 4, receiver_id: 1, message_thread_id: 3, message: "ughhhh")
+Message.create(sender_id: 1, receiver_id: 4, message_thread_id: 3, message: "what?")
+Message.create(sender_id: 4, receiver_id: 1, message_thread_id: 3, message: "oh nothing I just want to tell you something and I don't think I have the confidence to")
+Message.create(sender_id: 1, receiver_id: 4, message_thread_id: 3, message: "just tell me!!!!")
+
+Messagethread.create(initiator_id: 5, receiver_id: 1)
+Message.create(sender_id: 5, receiver_id: 1, message_thread_id: 4, message: "ughhhh")
+Message.create(sender_id: 5, receiver_id: 1, message_thread_id: 4, message: "what?")
+Message.create(sender_id: 5, receiver_id: 1, message_thread_id: 4, message: "oh nothing I just want to tell you something and I don't think I have the confidence to")
+Message.create(sender_id: 5, receiver_id: 1, message_thread_id: 4, message: "just tell me!!!!")

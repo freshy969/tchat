@@ -10,6 +10,7 @@
   .messagethread-index-container{
     display: flex;
     flex-direction: column;
+    width: 40vw;
     margin-bottom: 40px;
     .button{
       background-color: #FFF0F2;
@@ -55,5 +56,8 @@
         }
       }
     }
+  }
+  .messages-container{
+    width: 40vw;
   }
 }

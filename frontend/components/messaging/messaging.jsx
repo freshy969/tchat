@@ -7,6 +7,13 @@ class Messaging extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      message_thread_id: this.props.message_thread_id,
+      sender_id: this.props.sender_id,
+      message: this.props.message,
+      receiver_id: this.props.receiver_id,
+    }
+    this.update = this.update.bind(this);
   }
 
   componentWillMount(){
@@ -19,6 +26,12 @@ class Messaging extends React.Component {
   //     ui: this.props.currentMessagethread.id,
   //   });
   // }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
 
   render() {
     return(
@@ -39,10 +52,10 @@ class Messaging extends React.Component {
           </div>
           <div className="message-bottomcontainer">
             <textarea
-              value=""
+              value={this.state.message}
               rows="5"
               cols="33"
-              onChange={null}
+              onChange={this.update("message")}
               className="new-message"
               ></textarea>
           </div>

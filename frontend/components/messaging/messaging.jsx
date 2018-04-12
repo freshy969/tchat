@@ -7,6 +7,7 @@ class Messaging extends React.Component {
 
   constructor(props) {
     super(props);
+
   }
 
   componentWillMount(){
@@ -22,7 +23,11 @@ class Messaging extends React.Component {
           {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem currentUserId={this.props.currentUser.id} key={messagethread.id} messagethread={messagethread} />)}
         </div>
         <div className="messages-container">
-          {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
+          <div className="messages-container-info">
+          </div>
+          <div className="messages-container-content">
+            {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
+          </div>
         </div>
       </header>
     )

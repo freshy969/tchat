@@ -5,6 +5,7 @@
 
 .profile-container {
   background-color: #FFF0F2;
+  min-height: 80vh;
   .profile-container-edit{
     .profile-nav-buttons-container{
       width: 200px;
@@ -231,6 +232,7 @@
 .index-container{
   background-color: #FFF0F2;
   width: 100%;
+  min-height: 80vh;
   .index-list{
     width: 70%;
     padding-top: 50px;

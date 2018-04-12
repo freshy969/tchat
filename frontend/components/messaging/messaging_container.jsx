@@ -7,7 +7,8 @@ import { requestMessages, requestMessagethreads} from '../../actions/message_act
 const mapStateToProps = (state, ownProps) => ({
   messages: selectMessages(state),
   messagethreads: selectMessagethreads(state),
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  currentMessagethread: state.messagethreads[state.ui.currentMessagethread]
 });
 
 const mapDispatchToProps = dispatch => {

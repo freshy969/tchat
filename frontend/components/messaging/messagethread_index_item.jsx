@@ -1,16 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {receiveCurrentMessagethreadId} from '../../actions/message_actions';
 
 class MessagethreadIndexItem extends React.Component{
 
   constructor(props){
     super(props);
+    this.receiveCurrent = this.receiveCurrent.bind(this);
+  }
+
+  receiveCurrent(){
+    dispatch(receiveCurrentMessagethreadId(this.props.messagethread.id))
   }
 
   render(){
     console.log(this.props);
     return(
     <li className="messagethread-index-item">
+      <button onClick={this.receiveCurrent}>
       <div className="messagethread-index-link">
         <img src={(this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_profpic : this.props.messagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}/>
         <br/>
@@ -23,6 +30,7 @@ class MessagethreadIndexItem extends React.Component{
         <span>{this.props.messagethread.last_message}</span>
         <br/>
       </div>
+      </button>
     </li>
   )
   }

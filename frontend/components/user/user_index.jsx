@@ -26,7 +26,6 @@ class UserIndex extends React.Component {
   // }
 
   render() {
-    console.log(this.props.users)
     return(
       <header className="index-container">
         <ul className="index-list">

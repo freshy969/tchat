@@ -50,7 +50,6 @@ class ProfileEdit extends React.Component {
   // }
 
   render() {
-    console.log(this.props)
     return(
       <header className="profile-container">
         <div className="profile-container-edit">

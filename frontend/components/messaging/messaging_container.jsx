@@ -3,6 +3,7 @@ import React from 'react';
 import Messaging from './messaging';
 import { selectMessages, selectMessagethreads } from '../../reducers/selectors';
 import { requestMessages, requestMessagethreads} from '../../actions/message_actions';
+import {receiveCurrentMessagethreadId} from '../../actions/message_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   messages: selectMessages(state),
@@ -14,7 +15,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => {
   return {
     requestMessages: () => dispatch(requestMessages()),
-    requestMessagethreads: () => dispatch(requestMessagethreads())
+    requestMessagethreads: () => dispatch(requestMessagethreads()),
+    receiveCurrentMessagethreadId: () => dispatch(receiveCurrentMessagethreadId())
   };
 };
 

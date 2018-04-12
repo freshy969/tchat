@@ -36,6 +36,20 @@ export const selectMessagethreads = state => {
       result.push(state.messagethreads[id]);
     }
   }
+  let unfinished = true;
+  // while(unfinished && result!==[]){
+  //   unfinished = false;
+  //   let counter = 0;
+  //   while (counter < result.length){
+  //     if (result[counter].messages.last.created_at<result[counter +1].messages.last.created_at){
+  //       let temp = result[counter];
+  //       result[counter] = result[counter+1];
+  //       result[counter+1] = temp;
+  //       unfinished=true;
+  //       counter+=1;
+  //     }
+  //   }
+  // }
   return result;
 };
 

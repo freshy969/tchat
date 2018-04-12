@@ -11,11 +11,9 @@ class MessagethreadIndexItem extends React.Component{
 
   receiveCurrent(){
     dispatch(receiveCurrentMessagethreadId(this.props.messagethread.id));
-    // .then(() =>this.props.history.push(`/messaging/${this.props.messagethread.id}`) )
   }
 
   render(){
-    console.log(this.props);
     return(
     <button onClick={this.receiveCurrent} className="messagethread-index-item">
       <div className="messagethread-index-left">

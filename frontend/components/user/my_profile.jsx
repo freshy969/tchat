@@ -8,7 +8,6 @@ class Profile extends React.Component {
 
   componentDidMount(){
     this.props.requestUser(this.props.currentUser.id);
-    console.log(this.props)
   }
 
   // componentWillReceiveProps(nextProps){

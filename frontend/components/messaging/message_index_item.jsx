@@ -8,7 +8,6 @@ class MessageIndexItem extends React.Component{
   }
 
   render(){
-    console.log(this.props);
     return(
     <div className="message-index-item">
       {this.props.message.message}

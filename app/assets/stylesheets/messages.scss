@@ -30,6 +30,7 @@
           border-radius: 50%;
           width: 100px;
           height: 100px;
+          margin-right: 15px;
         }
       }
       .messagethread-index-right{
@@ -42,7 +43,7 @@
           padding-bottom: 10px;
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-between;
           font-size: 17px;
           font-weight: bold;
           .mthreadindexlast{
@@ -53,12 +54,28 @@
         .messagethread-index-bottomright{
           font-size: 13px;
           align-self: flex-start;
-          padding-left: 15px;
         }
       }
     }
   }
   .messages-container{
-    width: 40vw;
+    height: inherit;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    border: 1px solid black;
+    img{
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+    .messages-topcontainer{
+      height: 20vh;
+      background-color: white;
+      border-bottom: 1px solid black;
+    }
+
   }
 }

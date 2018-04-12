@@ -60,21 +60,28 @@
   }
   .messages-container{
     height: inherit;
+    margin-top: 20px;
+    margin-bottom: 40px;
     width: 50vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: white;
     border: 1px solid black;
-    img{
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-    }
     .messages-topcontainer{
       height: 20vh;
       background-color: white;
       border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      img{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .messages-middlecontainer{
+      background-color: yellow;
     }
 
   }

@@ -29,16 +29,17 @@ class Messaging extends React.Component {
           {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem currentUserId={this.props.currentUser.id} key={messagethread.id} messagethread={messagethread} />)}
         </div>
         <div className="messages-container">
-          <div className="messages-container-info">
-          </div>
           <div className="messages-container-content">
             <div className="messages-topcontainer">
               <img src={this.props.currentMessagethread? ((this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_profpic : this.props.currentMessagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg') : 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}/>
               <span>{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_name : this.props.currentMessagethread.initiator_name) : "nuttin"}</span>
               <span>{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_pronouns : this.props.currentMessagethread.initiator_pronouns) : "nuttin"}</span>
             </div>
-            <div className="message-bottomcontainer">
+            <div className="message-middlecontainer">
               {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
+            </div>
+            <div className="message-bottomcontainer">
+              
             </div>
           </div>
         </div>

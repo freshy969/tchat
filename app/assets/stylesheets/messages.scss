@@ -101,9 +101,27 @@
           margin: 10px;
         }
       }
+
     }
-    .messages-middlecontainer{
-      background-color: yellow;
+    .message-middlecontainer{
+      .message-index-item-container{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 30vw;
+        .Message-Sender{
+          background: #4c7bd9;
+          color: white;
+          border-radius: 5px;
+          min-height: 40px;
+          align-self: flex-start;
+        }
+        .Message-Receiver{
+          background: #ebedf2;
+          color: black;
+          border-radius: 5px;
+          min-height: 40px;
+        }
+      }
     }
 
   }

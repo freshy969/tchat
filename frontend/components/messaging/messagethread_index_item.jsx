@@ -10,7 +10,8 @@ class MessagethreadIndexItem extends React.Component{
   }
 
   receiveCurrent(){
-    dispatch(receiveCurrentMessagethreadId(this.props.messagethread.id))
+    dispatch(receiveCurrentMessagethreadId(this.props.messagethread.id));
+    // .then(() =>this.props.history.push(`/messaging/${this.props.messagethread.id}`) )
   }
 
   render(){

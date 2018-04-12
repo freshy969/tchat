@@ -9,7 +9,7 @@ class SignupForm extends React.Component {
       password: '',
       screen_name: '',
       pronouns: '',
-      city: '',
+      city: 'Bay Area',
       age: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -98,7 +98,7 @@ class SignupForm extends React.Component {
               <div className="forms">
               <div className="fakeform">
               <select value={this.props.city? this.props.city : this.state.city} onChange={this.update('city')} className="login-input">
-                <option value="Bay Area">Bay Area</option>
+                <option selected="selected" value="Bay Area">Bay Area</option>
                 <option value="LA">LA</option>
                 <option value="NY">NY</option>
                 <option value="DC">DC</option>

@@ -41,7 +41,7 @@ class Profile extends React.Component {
                 </div>
               </div>
               <div id="profile-nav-buttons-container">
-                <Link to={`/message/${this.props.user.id}`} id="profile-nav-buttons">
+                <Link to={`/messaging`} id="profile-nav-buttons">
                   <span>Message</span>
                 </Link>
               </div>

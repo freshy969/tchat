@@ -11,6 +11,7 @@ import UserProfileContainer from './user/my_profile_container';
 import UserProfileEditContainer from './user/my_profile_edit_container';
 import UserIndexContainer from './user/user_index_container';
 import TheirProfileContainer from './user/their_profile_container';
+import MessagingContainer from './messaging/messaging_container';
 
 const App = () => (
   <div className="page">
@@ -20,6 +21,7 @@ const App = () => (
       <ProtectedRoute path="/users/:userId" component={TheirProfileContainer} />
       <ProtectedRoute path="/users" component={UserIndexContainer} />
       <ProtectedRoute path="/profile/edit" component={UserProfileEditContainer} />
+      <ProtectedRoute path="/messaging" component={MessagingContainer} />
       <ProtectedRoute path="/" component={UserProfileContainer} />
     </Switch>
     <Footer />

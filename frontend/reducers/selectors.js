@@ -43,7 +43,7 @@ export const selectMessages = state => {
   let result = [];
   for (let id in state.messages){
     if (state.messages[id].message_thread_id===state.ui.currentMessagethread){
-      result.push(state.messagethreads[id]);
+      result.push(state.messages[id]);
     }
   }
   return result;

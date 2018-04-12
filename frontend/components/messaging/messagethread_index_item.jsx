@@ -16,7 +16,7 @@ class MessagethreadIndexItem extends React.Component{
   render(){
     console.log(this.props);
     return(
-    <li className="messagethread-index-item">
+    <div className="messagethread-index-item">
       <button onClick={this.receiveCurrent}>
       <div className="messagethread-index-link">
         <img src={(this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_profpic : this.props.messagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}/>
@@ -31,7 +31,7 @@ class MessagethreadIndexItem extends React.Component{
         <br/>
       </div>
       </button>
-    </li>
+    </div>
   )
   }
 

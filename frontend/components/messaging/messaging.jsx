@@ -33,6 +33,12 @@ class Messaging extends React.Component {
     });
   }
 
+  handleSubmit(e){
+    e.preventDefault();
+    const message = Object.assign({}, this.state);
+    this.props.postNewMessage(message).then(() => this.props.history.push('/messaging'));
+  }
+
   render() {
     return(
       <header className="message-container">
@@ -51,13 +57,15 @@ class Messaging extends React.Component {
             {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
           </div>
           <div className="message-bottomcontainer">
-            <textarea
-              value={this.state.message}
-              rows="5"
-              cols="33"
-              onChange={this.update("message")}
-              className="new-message"
-              ></textarea>
+            <form onSubmit={this.handleSubmit}>
+              <textarea
+                value={this.state.message}
+                rows="5"
+                cols="33"
+                onChange={this.update("message")}
+                className="new-message"
+                ></textarea>
+            </form>
           </div>
         </div>
       </header>

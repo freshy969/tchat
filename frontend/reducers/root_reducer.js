@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
   users: usersReducer,
   user: userReducer,
   messages: messagesReducer,
-  messagethreads: messagethreadsReducer
+  messagethreads: messagethreadsReducer,
 });
 
 export default rootReducer;

@@ -2,6 +2,7 @@ import * as MESSAGEUtil from '../util/message_api_util';
 
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGE';
 export const RECEIVE_MESSAGETHREADS = 'RECEIVE_MESSAGETHREAD';
+export const RECEIVE_CURRENT_MESSAGETHREAD_ID = 'RECEIVE_CURRENT_MESSAGE_THREAD_ID';
 
 export const receiveMessagethreads = messagethreads => ({
   type: RECEIVE_MESSAGETHREADS,
@@ -12,6 +13,11 @@ export const receiveMessages = messages => ({
   type: RECEIVE_MESSAGES,
   messages
 });
+
+export const receiveCurrentMessagethreadId = messagethreadId => ({
+  type: RECEIVE_CURRENT_MESSAGETHREAD_ID,
+  messagethreadId
+})
 
 export const requestMessages = () => dispatch => (
   MESSAGEUtil.fetchMessages().then(messages=>(

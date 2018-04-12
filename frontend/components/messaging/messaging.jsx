@@ -21,7 +21,7 @@ class Messaging extends React.Component {
         </div>
 
         <div className="featured-message-container">
-          Placeholder
+          {this.props.messages.map(message => <Messageindexitem currentUserId={this.props.currentUser.id}/>)}
         </div>
       </header>
     )

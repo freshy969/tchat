@@ -81,7 +81,7 @@
       // align-self: center;
       height: 15vh;
       background-color: white;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid lightgrey;
       display: flex;
       align-items: center;
       img{
@@ -139,6 +139,9 @@
           margin-right: auto;
         }
       }
+    }
+    .message-bottomcontainer{
+      justify-content: flex-end;
     }
 
   }

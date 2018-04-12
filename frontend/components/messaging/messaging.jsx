@@ -28,26 +28,24 @@ class Messaging extends React.Component {
           {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem currentUserId={this.props.currentUser.id} key={messagethread.id} messagethread={messagethread} />)}
         </div>
         <div className="messages-container">
-          <div className="messages-container-content">
-            <div className="messages-topcontainer">
-              <img src={this.props.currentMessagethread? ((this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_profpic : this.props.currentMessagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg') : 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523556089/Blank.png'}/>
-              <div className="messages-toprightcontainer">
-                <span className="messages-screenname">{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_name : this.props.currentMessagethread.initiator_name) : ""}</span>
-                <span>{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_pronouns : this.props.currentMessagethread.initiator_pronouns) : ""}</span>
-              </div>
+          <div className="messages-topcontainer">
+            <img src={this.props.currentMessagethread? ((this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_profpic : this.props.currentMessagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg') : 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523556089/Blank.png'}/>
+            <div className="messages-toprightcontainer">
+              <span className="messages-screenname">{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_name : this.props.currentMessagethread.initiator_name) : ""}</span>
+              <span>{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_pronouns : this.props.currentMessagethread.initiator_pronouns) : ""}</span>
             </div>
-            <div className="message-middlecontainer">
-              {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
-            </div>
-            <div className="message-bottomcontainer">
-              <textarea
-                value=""
-                rows="5"
-                cols="33"
-                onChange={null}
-                className="new-message"
-                ></textarea>
-            </div>
+          </div>
+          <div className="message-middlecontainer">
+            {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
+          </div>
+          <div className="message-bottomcontainer">
+            <textarea
+              value=""
+              rows="5"
+              cols="33"
+              onChange={null}
+              className="new-message"
+              ></textarea>
           </div>
         </div>
       </header>

@@ -14,6 +14,7 @@ class Messaging extends React.Component {
       receiver_id: this.props.receiver_id,
     }
     this.update = this.update.bind(this);
+    this.handleSubmit = this.update.bind(this);
   }
 
   componentWillMount(){

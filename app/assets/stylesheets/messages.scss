@@ -69,13 +69,16 @@
     height: inherit;
     margin-top: 20px;
     margin-bottom: 40px;
+    // align-items: center;
     width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
     .messages-topcontainer{
+      // align-self: center;
       height: 15vh;
       background-color: white;
       border-bottom: 1px solid black;
@@ -104,22 +107,36 @@
 
     }
     .message-middlecontainer{
+      width: inherit;
+      align-self: center;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-direction: column;
       .message-index-item-container{
+        display: flex;
+        flex-direction: row;
         margin-top: 10px;
         margin-bottom: 10px;
-        max-width: 30vw;
+        width: inherit;
+        p{
+          border-radius: 5px;
+          // min-height: 40px;
+          font-size: 17px;
+          padding: 10px;
+          text-align: center center;
+          max-width: 50%
+        }
         .Message-Sender{
           background: #4c7bd9;
           color: white;
-          border-radius: 5px;
-          min-height: 40px;
-          align-self: flex-start;
+          margin-left: auto;
+          margin-right: 5%;
         }
         .Message-Receiver{
           background: #ebedf2;
           color: black;
-          border-radius: 5px;
-          min-height: 40px;
+          margin-left: 5%;
+          margin-right: auto;
         }
       }
     }

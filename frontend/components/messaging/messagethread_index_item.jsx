@@ -21,14 +21,13 @@ class MessagethreadIndexItem extends React.Component{
         <img src={(this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_profpic : this.props.messagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}/>
       </div>
       <div className="messagethread-index-right">
-        <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_name : this.props.messagethread.initiator_name}</span>
-        <br/>
-        <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_pronouns : this.props.messagethread.initiator_pronouns}</span>
-        <br/>
-        <span>{this.props.messagethread.last_message_sent}</span>
-        <br/>
-        <span>{this.props.messagethread.last_message}</span>
-        <br/>
+        <div className="messagethread-index-topright">
+          <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_name : this.props.messagethread.initiator_name} | {this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_pronouns : this.props.messagethread.initiator_pronouns}</span>
+          <span className="mthreadindexlast">{this.props.messagethread.last_message_sent}</span>
+        </div>
+        <div className="messagethread-index-bottomright">
+          <span>{this.props.messagethread.last_message}</span>
+        </div>
       </div>
     </button>
     )

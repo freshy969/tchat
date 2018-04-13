@@ -69,6 +69,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token!
 
   attr_reader :password
+  attr_accessor :has_thread
 
   def password=(password)
     @password = password
@@ -92,5 +93,9 @@ class User < ApplicationRecord
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
+  end
+
+  def has_thread?(user2)
+    self.has_thread = false
   end
 end

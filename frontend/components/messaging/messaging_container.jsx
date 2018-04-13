@@ -10,11 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
   messagethreads: selectMessagethreads(state),
   currentUser: state.session.currentUser,
   currentMessagethread: state.messagethreads[state.ui.currentMessagethread],
-  message_thread_id: state.ui.currentMessagethread,
-  sender_id: state.session.currentUser.id,
-  message: "",
-  receiver_id: state.ui.currentMessagethread===-1? -1: (state.session.currentUser.id === state.messagethreads[state.ui.currentMessagethread].initiator_id? state.messagethreads[state.ui.currentMessagethread].receiver_id : state.messagethreads[state.ui.currentMessagethread].initiator_id),
-
+  sender_id: state.session.currentUser.id
 });
 
 const mapDispatchToProps = dispatch => {

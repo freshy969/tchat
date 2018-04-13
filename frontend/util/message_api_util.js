@@ -27,9 +27,9 @@ export const fetchMessage = (id) => (
 );
 
 export const postMessage = (message) => (
-  $.ajaz({
+  $.ajax({
     method: 'POST',
     url: 'api/messages',
     data: {message}
   })
-)
+);

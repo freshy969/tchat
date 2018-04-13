@@ -16,7 +16,29 @@ class MessagethreadIndexItem extends React.Component{
   render(){
 
     const t = new Date(this.props.messagethread.last_message_sent);
-    console.log(t.toLocaleString());
+    const current = new Date();
+    const timeAgo = Math.abs(current.getTime() - t.getTime());
+    let output = "";
+    if (timeAgo<(1000*60)){
+      output = `${Math.floor(timeAgo/1000)}` + " seconds ago";
+    } else if (timeAgo<(1000*3600)){
+      output = `${Math.floor(timeAgo/(1000*60))}` + " minutes ago";
+    } else if (timeAgo<(1000*3600*24)){
+      output = `${Math.floor(timeAgo/(1000*3600))}` + " hours ago";
+    } else if (timeAgo<(1000*3600*24*2)){
+      output = "yesterday"
+    } else if (timeAgo<(1000*3600*24*7)){
+      output = `${Math.floor(timeAgo/(1000*3600*24))}` + " days ago";
+    } else if (timeAgo<(1000*3600*24*14)){
+      output = "one week ago"
+    } else if (timeAgo<(1000*3600*24*365)){
+      output = `${Math.floor(timeAgo/(1000*3600*24*7))}` + " weeks ago"
+    } else if (timeAgo<(1000*3600*24*365*2)){
+      output = "one year ago"
+    } else {
+      output = `${Math.floor(timeAgo/(1000*3600*24*365))}` + " years ago"
+    }
+    console.log(output);
 
     return(
     <button onClick={this.receiveCurrent} className="messagethread-index-item">
@@ -29,7 +51,7 @@ class MessagethreadIndexItem extends React.Component{
             <span>{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_name : this.props.messagethread.initiator_name} </span>
             <span className="toprightleftlolpnouns">{this.props.messagethread.initiator_id===this.props.currentUserId? this.props.messagethread.receiver_pronouns : this.props.messagethread.initiator_pronouns}</span>
           </div>
-          <span className="mthreadindexlast">{this.props.messagethread.last_message_sent? t.toLocaleString(): ""}</span>
+          <span className="mthreadindexlast">{output}</span>
         </div>
         <div className="messagethread-index-bottomright">
           <span>{this.props.messagethread.last_message}</span>

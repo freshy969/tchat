@@ -12,18 +12,21 @@ class Profile extends React.Component {
 
   componentWillUnmount() {
     this.props.removeUserState();
-    // this.props.requestUser(this.props.match.params.userId);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.userId !== nextProps.match.params.userId) {
-  //     this.props.requestUser(nextProps.match.params.userId);
-  //   }
-  // }
-
   handleToMessaging(){
-    debugger;
-    this.props.receiveCurrentMessagethreadId(this.props.user.hasThread);
+    if (!!this.props.user.hasThread){
+      this.props.receiveCurrentMessagethreadId(this.props.user.hasThread);
+    } else{
+      this.handleModal('newPost');
+    }
+  }
+
+  handleModal(type) {
+    return ((e) => {
+      e.preventDefault();
+      this.props.openModal(type);
+    })
   }
 
   render() {

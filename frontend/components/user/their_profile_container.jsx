@@ -4,6 +4,7 @@ import { requestUser, removeUserState } from '../../actions/user_actions';
 import TheirProfile from './their_profile';
 import values from 'lodash/values';
 import {receiveCurrentMessagethreadId} from '../../actions/message_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -16,6 +17,7 @@ const mapDispatchToProps = dispatch => {
     requestUser: (id) => dispatch(requestUser(id)),
     removeUserState: () => dispatch(removeUserState()),
     receiveCurrentMessagethreadId: (id) => dispatch(receiveCurrentMessagethreadId(id)),
+    openModal: modal => dispatch(openModal(modal)),
   };
 };
 

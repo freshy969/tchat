@@ -112,8 +112,9 @@
       min-height: 400px;
       margin-left: 10px;
       margin-right: 10px;
+      // display: flex;
       flex-direction: column;
-      overflow: scroll;
+      overflow-y: scroll;
       .message-index-item-container{
         display: flex;
         flex-direction: row;

@@ -68,14 +68,18 @@ footer{
   border-bottom: 1px solid hsla(0,0%,100%,.25);
 }
 
-.navlogo, .profpic{
+.navlogo, .profpic, .navbarMessageLink{
   margin-left: 30px;
   width: 42px;
   height: 42px;
   border-radius: 100%;
 }
 
-.profpic{
+.navbarMessageLink{
+  border-radius: 0%;
+}
+
+.profpic, .navbarMessageLink{
   margin: 15px;
 }
 

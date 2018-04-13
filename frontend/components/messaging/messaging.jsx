@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MessagethreadIndexItem from './messagethread_index_item';
 import MessageIndexItem from './message_index_item';
+import { Element, animateScroll } from 'react-scroll';
 
 class Messaging extends React.Component {
 
@@ -13,13 +14,19 @@ class Messaging extends React.Component {
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.checkForEnter = this.checkForEnter.bind(this);
+    this.scrollToBottom = this.scrollToBottom.bind(this);
   }
 
   componentWillMount(){
     this.props.requestMessages();
     this.props.requestMessagethreads();
+    // this.scrollToBottom();
   }
 
+  scrollToBottom(){
+    const element = document.getElementById("scrollBottom");
+    this.el.scrollIntoView({ behavior: "smooth" });
+  }
 
   update(field) {
     return e => this.setState({
@@ -68,6 +75,7 @@ class Messaging extends React.Component {
           </div>
           <div className="message-middlecontainer">
             {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
+            <div id="scrollBottom"/>
           </div>
           <div className="message-bottomcontainer">
             <form onSubmit={this.handleSubmit}>

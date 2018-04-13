@@ -59,11 +59,10 @@ that includes information such as pronouns, screen_name, and profile picture
 
 ## Design documents
 
-+ [MVP List](mvp-List)
-+ [Schema](schema)
-+ [Routes](routes)
-+ [Sample State](sample-state)
-+ [Component Hierarchy](component-hierarchy)
++ [Proposed Schema](https://github.com/mattieholtzer/tchat/wiki/Schema)
++ [Proposed Routes](https://github.com/mattieholtzer/tchat/wiki/Routes)
++ [Proposed Sample State](https://github.com/mattieholtzer/tchat/wiki/Sample-State)
++ [Proposed Component Hierarchy](https://github.com/mattieholtzer/tchat/wiki/Component-Hierarchy)
 
 ## Where it will go from here
 

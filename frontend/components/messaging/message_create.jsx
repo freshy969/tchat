@@ -30,7 +30,7 @@ class MessageCreate extends React.Component {
     }
     const messagethread = Object.assign({}, messagethread1);
     const message = Object.assign({}, this.state, message1);
-    this.props.postMessageThread(messagethread).then(() => this.props.postNewMessage(message));
+    this.props.postMessageThread(messagethread).then(() => this.props.postNewMessage(message)).then(() => this.props.closeModal()).then(() => this.props.history.push('/messaging'));
     // this.props.postNewMessage(message)).then(() => this.props.requestMessagethreads());
   }
 

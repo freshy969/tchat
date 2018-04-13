@@ -8,7 +8,7 @@ were heavily inspired by design from okCupid.
 
 Live link to the app can be found here --> [tChat](http://www.tchat.lgbt)
 
-## How to use
+## How to get started
 
 If you are looking to participate as a member of the community you would
 
@@ -26,7 +26,7 @@ If you are looking to participate as a member of the community you would
 
 4. Now that you've got a pretty account all set up it's time to get chatting! Head over to the browse users page. Here you will get to scroll quickly through other users in your city.
 
-![Browse_users](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523653512/Screen_Shot_2018-04-13_at_2.04.11_PM.png)
+![Browse_users](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523654383/Screen_Shot_2018-04-13_at_2.19.11_PM.png)
 
 5. On the browse users page you can click on any user to see what they've got going on. All users will be in the city you have listed on your profile.
 

@@ -56,7 +56,7 @@ class Messaging extends React.Component {
       sender_id: this.props.sender_id
     }
     const message = Object.assign({}, this.state, message2);
-    this.props.postNewMessage(message);
+    this.props.postNewMessage(message).then(() => this.props.requestMessagethreads());
     this.setState({message: ''});
   }
 
@@ -66,7 +66,7 @@ class Messaging extends React.Component {
   //   pickUser = empty div
   // }
   render() {
-
+    console.log(this.props);
 
     return(
       <header className="message-container">
@@ -75,9 +75,9 @@ class Messaging extends React.Component {
         </div>
         <div className="messages-container">
           <div className="messages-topcontainer">
-            <img src={this.props.currentMessagethread? ((this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_profpic : this.props.currentMessagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg') : 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523556089/Blank.png'}/>
+            <img src={this.props.currentMessagethread? ((this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_profpic : this.props.currentMessagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg') : 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523605725/pink-left-arrow-png-image-229.png'}/>
             <div className="messages-toprightcontainer">
-              <span className="messages-screenname">{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_name : this.props.currentMessagethread.initiator_name) : ""}</span>
+              <span className="messages-screenname">{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_name : this.props.currentMessagethread.initiator_name) : "Pick a friend to chat"}</span>
               <span>{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_pronouns : this.props.currentMessagethread.initiator_pronouns) : ""}</span>
             </div>
           </div>

@@ -19,22 +19,29 @@ class MessagethreadIndexItem extends React.Component{
     const current = new Date();
     const timeAgo = Math.abs(current.getTime() - t.getTime());
     let output = "";
-    if (timeAgo<(1000*60)){
+    if (timeAgo<(1000*2)){
+      output = "1 second ago";
+    } if (timeAgo<(1000*60)){
       output = `${Math.floor(timeAgo/1000)}` + " seconds ago";
-    } else if (timeAgo<(1000*3600)){
+    } else if (timeAgo<(1000*60*2)){
+      output = "1 minute ago";
+    }else if (timeAgo<(1000*3600)){
       output = `${Math.floor(timeAgo/(1000*60))}` + " minutes ago";
-    } else if (timeAgo<(1000*3600*24)){
+    } else if (timeAgo<(1000*3600*2)){
+      output = "1 hour ago";
+    }
+    else if (timeAgo<(1000*3600*24)){
       output = `${Math.floor(timeAgo/(1000*3600))}` + " hours ago";
     } else if (timeAgo<(1000*3600*24*2)){
       output = "yesterday"
     } else if (timeAgo<(1000*3600*24*7)){
       output = `${Math.floor(timeAgo/(1000*3600*24))}` + " days ago";
     } else if (timeAgo<(1000*3600*24*14)){
-      output = "one week ago"
+      output = "1 week ago"
     } else if (timeAgo<(1000*3600*24*365)){
       output = `${Math.floor(timeAgo/(1000*3600*24*7))}` + " weeks ago"
     } else if (timeAgo<(1000*3600*24*365*2)){
-      output = "one year ago"
+      output = "1 year ago"
     } else {
       output = `${Math.floor(timeAgo/(1000*3600*24*365))}` + " years ago"
     }

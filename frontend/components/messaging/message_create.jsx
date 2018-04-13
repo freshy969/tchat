@@ -18,7 +18,7 @@ class MessageCreate extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log(this.props);
+    // console.log(this.props);
     e.preventDefault();
     let messagethread1 = {
       receiver_id: this.props.user.id,
@@ -30,7 +30,7 @@ class MessageCreate extends React.Component {
     }
     const messagethread = Object.assign({}, messagethread1);
     const message = Object.assign({}, this.state, message1);
-    this.props.postMessageThread(messagethread).then(() => this.props.postNewMessage(message1));
+    this.props.postMessageThread(messagethread).then(() => this.props.postNewMessage(message));
     // this.props.postNewMessage(message)).then(() => this.props.requestMessagethreads());
   }
 

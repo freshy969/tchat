@@ -28,4 +28,10 @@ class Message < ApplicationRecord
     primary_key: :id,
     foreign_key: :receiver_id
 
+  before_validation :ensure_message_thread
+
+  def ensure_message_thread
+    self.message_thread_id||=Messagethread.find_by_users(self.sender_id, self.receiver_id)
+  end
+
 end

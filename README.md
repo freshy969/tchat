@@ -43,11 +43,13 @@ If you ever run out of conversation just hit Browse Users to find more people.
 
 ## What it does
 
-As of now tChat does all the basics you expect from a dating app. You can make and edit an account
-that includes information such as pronouns, screen_name, and profile picture
+tChat, while existing as a dating app is effectively a chat app with some extra bells and whistles. The main functionality is that users can talk with one another in a safe and secure environment. While the quizzes and the likes and the swipes and some of the matching functionality is really cool it isn't a huge necessity for a dating app that is focused on a smaller demographic and can provide users with an excuse for not actually starting a conversation. On tChat the only way for two individuals to interact is to chat. All other features now and moving forward are designed to make finding others to chat with easier.
+
+The two other major features that exist because of this are profiles and the browse users view. The profile view is very simple. A single photo, a short bio, list of hobbies, etc. The only required items are pronouns, age, and city. City is mandatory for the browsing filtering functions and also to prevent users with a very meet up oriented mindset from chatting to somebody with whom that isn't possible. Age and pronouns are required as they are important things to know before potentially misgendering somebody or becoming unknowingly subjected to predatory behavior from older users. Browse Users is also extremely simple. A scroll page through all users in your area, shuffled every time you enter the page. The only way to positively interact with users seen here is to send them a message (in the future you will also be able to block).
 
 ## How it was built
 
+tChat is a full-stack web app built using Ruby On Rails and Postgres on the back end and a react/redux front end. The site is current hosted on Heroku but will likely be  
 - Ruby On Rails
 - PostgreSQL
 - React
@@ -73,7 +75,7 @@ There are many next steps for this app to go through. Here are a few.
 1. Allow users to block other users.
 2. Users will have an internal score and ranking based around some basic data (ratio of messages sent to received, block rate compared to others, )
 3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandates one of these codes to get on. On the other hand users with very low scores will be prevented from adding new members or potentially will be kicked off.
-4. 
+4.
 
 
 #### General

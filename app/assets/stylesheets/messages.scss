@@ -108,9 +108,12 @@
     .message-middlecontainer{
       width: inherit;
       height: 60%;
+      max-height: 400px;
+      min-height: 400px;
       margin-left: 10px;
       margin-right: 10px;
       flex-direction: column;
+      overflow: scroll;
       .message-index-item-container{
         display: flex;
         flex-direction: row;

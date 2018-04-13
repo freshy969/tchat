@@ -18,46 +18,14 @@ class MessageCreate extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(()=>this.props.closeModal()).then(() => this.props.requestUsers()).then(() => this.props.requestMessagethreads()).then(() => this.props.requestMessages());
-  }
-
-  // e.preventDefault();
-  // let message2 = {
-  //   message_thread_id: this.props.currentMessagethread.id,
-  //   receiver_id: this.props.currentUser.id === this.props.currentMessagethread.initiator_id? this.props.currentMessagethread.receiver_id : this.props.currentMessagethread.initiator_id,
-  //   sender_id: this.props.sender_id
-  // }
-  // const message = Object.assign({}, this.state, message2);
-  // this.props.postNewMessage(message).then(() => this.props.requestMessagethreads());
-  // this.setState({message: ''});
-
-  handleSubmit(e){
+    let message2 = {
+      message_thread_id: this.props.currentMessagethread.id,
+      receiver_id: this.props.currentUser.id === this.props.currentMessagethread.initiator_id? this.props.currentMessagethread.receiver_id : this.props.currentMessagethread.initiator_id,
+      sender_id: this.props.sender_id
+    }
     const message = Object.assign({}, this.state, message2);
     this.props.postNewMessage(message).then(() => this.props.requestMessagethreads());
     this.setState({message: ''});
-  }
-
-  componentDidMount(){
-    this.handleErrors();
-    if(this.props.formType==="Demo"){
-      this.setState({
-        username: 'Demo',
-        password: 'password'
-      })
-    }
-  }
-
-  renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
   }
 
   render() {
@@ -86,9 +54,6 @@ class MessageCreate extends React.Component {
                 className="login-input"
               />
             </label>
-            <div className="errors">
-              {this.renderErrors()}
-            </div>
             <br/>
               <input className="session-submit" type="submit" value={this.props.message} />
           </div>

@@ -33,3 +33,11 @@ export const postMessage = (message) => (
     data: {message}
   })
 );
+
+export const postMessageThread = (messagethread) => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/messagethreads',
+    data: {messagethread}
+  })
+)

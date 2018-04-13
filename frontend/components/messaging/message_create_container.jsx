@@ -3,7 +3,7 @@ import React from 'react';
 import MessageCreate from './message_create';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { selectMessages, selectMessagethreads } from '../../reducers/selectors';
-import { requestMessages, requestMessagethreads, receiveCurrentMessagethreadId} from '../../actions/message_actions';
+import { requestMessages, requestMessagethreads, receiveCurrentMessagethreadId, postNewMessage, postMessageThread} from '../../actions/message_actions';
 
 
 const mapStateToProps = (state) => {
@@ -21,7 +21,9 @@ const mapDispatchToProps = dispatch => {
     closeModal: () => dispatch(closeModal()),
     requestUsers: () => dispatch(requestUsers()),
     requestMessages: () => dispatch(requestMessages()),
-    requestMessagethreads: () => dispatch(requestMessagethreads())
+    requestMessagethreads: () => dispatch(requestMessagethreads()),
+    postNewMessage: (message) => dispatch(postNewMessage(message)),
+    postMessageThread: (messagethread) => dispatch(postMessageThread(messagethread))
   };
 };
 

@@ -90,7 +90,7 @@ class Messaging extends React.Component {
             <form onSubmit={this.handleSubmit}>
               <textarea
                 value={this.state.message}
-                rows="5"
+                rows="3"
                 cols="33"
                 onChange={this.update('message')}
                 className="new-message"

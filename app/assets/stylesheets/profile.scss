@@ -127,6 +127,11 @@
         // flex-direction: row;
         .profile-nav-buttons{
           padding: 10px;
+          padding-left: 40px;
+          padding-right: 40px;
+          margin-right: 40px;
+          position: relative;
+          right: 60px;
           border: 1px solid rgba(228,237,253,.55);
           text-decoration: none;
           color: white;
@@ -227,7 +232,7 @@
     top: 120px;
     // margin-top: 100px;
   }
-// 
+//
 }
 .index-container{
   background-color: #FFF0F2;

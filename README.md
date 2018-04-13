@@ -18,13 +18,15 @@ If you are looking to participate as a member of the community you would
 4. Now that you've got a pretty account all set up it's time to get chatting! Head over to the browse users page
 5. On the browse users page you can click on
 
-You can start by opening the live link to the app and navigate to the Demo button
+If you are looking to learn a little bit more about the project and the creator
+
+1.
 
 
 ## What it does
 
-As of now tChat does all the basics you expect from a dating app. You can make an account
-that includes some of the basics including
+As of now tChat does all the basics you expect from a dating app. You can make and edit an account
+that includes information such as pronouns, screen_name, and profile picture
 
 ## How it was built
 
@@ -32,4 +34,10 @@ that includes some of the basics including
 
 ## Where it will go from here
 
-There are many next steps for this app to go through.
+There are many next steps for this app to go through. Here are a few.
+
+1. Enhance the messaging experience by adding notifications, having timestamps within the messagethread show page, being more clear about read and unread message threads, etc.
+2. Set up messaging to use WebSockets so that the experience is much more real time.
+3. Implement more robust error handling and notification throughout the applicaiton.
+4. General speed improvements throughout the project in an attempt to limit the amount of superfluous calls being made.
+5. 

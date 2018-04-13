@@ -21,7 +21,7 @@ class NavBar extends React.Component{
       </div>
       <div className="right-nav">
         <Link to="/messaging">
-          <img className="navbarMessageLink" src="http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523604226/try2.png" />
+          <img className="navbarMessageLink" src="http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523604971/thishasgottabeit.png" />
         </Link>
         <Link to="/profile">
           <img className="profpic" src={`${this.props.currentUser.img_url || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}`}/>

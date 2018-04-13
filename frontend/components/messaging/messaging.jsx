@@ -38,13 +38,13 @@ class Messaging extends React.Component {
     this.setState({message: ''});
   }
 
-  render() {
-
   //   if !(this.props.)
   // pickUser = "fPick a user to message with!"
   // else {
   //   pickUser = empty div
   // }
+  render() {
+
 
     return(
       <header className="message-container">

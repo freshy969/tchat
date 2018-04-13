@@ -109,6 +109,43 @@ export const selectMessagethreads = state => {
 };
 ```
 
+2. Another snippet I want to
+
+```html
+<header className="message-container">
+  <div className="messagethread-index-container">
+    {this.props.messagethreads.map(messagethread => <MessagethreadIndexItem currentUserId={this.props.currentUser.id} key={messagethread.id} messagethread={messagethread} />)}
+  </div>
+  <div className="messages-container">
+    <div className="messages-topcontainer">
+      <Link to={`/users/${this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_id : this.props.currentMessagethread.initiator_id): ""}`}>
+        <img src={this.props.currentMessagethread? ((this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_profpic : this.props.currentMessagethread.initiator_profpic) || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg') : 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523605725/pink-left-arrow-png-image-229.png'}/>
+      </Link>
+      <div className="messages-toprightcontainer">
+        <span className="messages-screenname">{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_name : this.props.currentMessagethread.initiator_name) : "Pick a friend to chat"}</span>
+        <span>{this.props.currentMessagethread? (this.props.currentMessagethread.initiator_id===this.props.currentUser.id? this.props.currentMessagethread.receiver_pronouns : this.props.currentMessagethread.initiator_pronouns) : ""}</span>
+      </div>
+    </div>
+    <div className="message-middlecontainer">
+      {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
+      <div id="scrollBottom"/>
+    </div>
+    <div className="message-bottomcontainer">
+      <form onSubmit={this.handleSubmit}>
+        <textarea
+          value={this.state.message}
+          rows="3"
+          cols="33"
+          onChange={this.update('message')}
+          className="new-message"
+          onKeyDown={this.checkForEnter}
+        ></textarea>
+      </form>
+    </div>
+  </div>
+</header>
+```
+
 
 
 ## Design documents

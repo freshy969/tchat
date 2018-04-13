@@ -16,11 +16,7 @@ class Profile extends React.Component {
   }
 
   handleToMessaging(){
-    if (!!this.props.user.hasThread){
-      this.props.receiveCurrentMessagethreadId(this.props.user.hasThread);
-    } else{
-      this.handleModal('newPost');
-    }
+    this.props.receiveCurrentMessagethreadId(this.props.user.hasThread);
   }
 
   handleModal(type) {
@@ -54,7 +50,7 @@ class Profile extends React.Component {
                 </div>
               </div>
               <div id="profile-nav-buttons-container">
-                <Link to={`/messaging`} id="profile-nav-buttons" onClick={this.handleModal("newPost")}>
+                <Link to={`/messaging`} id="profile-nav-buttons" onClick={!!this.props.user.hasThread? this.handleToMessaging: this.handleModal("newPost")}>
                   <span>Message</span>
                 </Link>
               </div>

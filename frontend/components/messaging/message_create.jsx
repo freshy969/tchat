@@ -8,6 +8,7 @@ class MessageCreate extends React.Component {
       message: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.checkForEnter = this.checkForEnter.bind(this);
   }
 
   update(field) {
@@ -17,15 +18,20 @@ class MessageCreate extends React.Component {
   }
 
   handleSubmit(e) {
+    console.log(this.props);
     e.preventDefault();
     let message2 = {
-      message_thread_id: this.props.currentMessagethread.id,
-      receiver_id: this.props.currentUser.id === this.props.currentMessagethread.initiator_id? this.props.currentMessagethread.receiver_id : this.props.currentMessagethread.initiator_id,
-      sender_id: this.props.sender_id
+      receiver_id: this.props.user.id,
+      initiator_id: this.props.sender_id,
     }
-    const message = Object.assign({}, this.state, message2);
-    this.props.postNewMessage(message).then(() => this.props.requestMessagethreads());
-    this.setState({message: ''});
+    const messagethread = Object.assign({}, this.state, message2);
+    this.props.postMessageThread(messagethread).then(() => this.props.requestMessagethreads());
+  }
+
+  checkForEnter(e){
+    if (e.key === 'Enter'){
+      this.handleSubmit(e);
+    }
   }
 
   render() {
@@ -39,23 +45,17 @@ class MessageCreate extends React.Component {
           </h2>
           <div className="login-form">
             <br/>
-            <label>Username <br></br>
-              <input type="text"
-                value={this.props.username? this.props.username : this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
+            <label>Hey is for horses<br></br>
+              <textarea
+                value={this.state.message}
+                rows="5"
+                cols="33"
+                onChange={this.update('message')}
+                className="new-message"
+                onKeyDown={this.checkForEnter}
+              ></textarea>
             </label>
-            <br/>
-            <label>Password <br></br>
-              <input type="password"
-                value={this.props.password? this.props.password : this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-              <input className="session-submit" type="submit" value={this.props.message} />
+            <input className="session-submit" type="submit" value={this.props.message} />
           </div>
         </form>
       </div>

@@ -62,7 +62,6 @@ class Messaging extends React.Component {
           <div className="message-middlecontainer">
             {this.props.messages.map(message => <MessageIndexItem currentUserId={this.props.currentUser.id} message={message}/>)}
           </div>
-          {pickUser}
           <div className="message-bottomcontainer">
             <form onSubmit={this.handleSubmit}>
               <textarea

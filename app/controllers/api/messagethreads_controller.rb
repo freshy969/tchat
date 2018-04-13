@@ -6,6 +6,7 @@ class Api::MessagethreadsController < ApplicationController
     # if @messagethread.save
     #   render: api_messagethread_url(@messagethread)
     # else
+    render json: @messagethread.id
   end
 
   def show

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class MessageCreate extends React.Component {
   constructor(props) {
@@ -65,4 +65,4 @@ class MessageCreate extends React.Component {
   }
 }
 
-export default MessageCreate;
+export default withRouter(MessageCreate);

@@ -38,5 +38,7 @@ export const postNewMessage = (message) => dispatch => (
 );
 
 export const postMessageThread = (messagethread) => dispatch => (
-  MESSAGEUtil.postMessageThread(messagethread)
+  MESSAGEUtil.postMessageThread(messagethread).then(id => (
+    dispatch(receiveCurrentMessagethreadId(id))
+  ))
 );

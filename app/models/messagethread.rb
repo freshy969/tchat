@@ -32,7 +32,10 @@ class Messagethread < ApplicationRecord
     if user.nil?
       user = Messagethread.find_by(receiver_id: sender, initiator_id: receiver)
     end
-    return user
+    if user.nil?
+      return false
+    end
+    return true
   end
 
 end

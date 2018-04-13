@@ -96,6 +96,6 @@ class User < ApplicationRecord
   end
 
   def has_thread?(user2)
-    self.has_thread = false
+    Messagethread.find_by_users(self.id, user2.id)
   end
 end

@@ -12,6 +12,7 @@ class Messaging extends React.Component {
     }
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.checkForEnter = this.checkForEnter.bind(this);
   }
 
   componentWillMount(){
@@ -24,6 +25,12 @@ class Messaging extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value,
     });
+  }
+
+  checkForEnter(e){
+    if (e.key === 'Enter'){
+      this.handleSubmit(e);
+    }
   }
 
   handleSubmit(e){
@@ -70,8 +77,8 @@ class Messaging extends React.Component {
                 cols="33"
                 onChange={this.update('message')}
                 className="new-message"
+                onKeyDown={this.checkForEnter}
               ></textarea>
-            <input type="submit" value="Send" className="submit-prof-updates"/>
             </form>
           </div>
         </div>

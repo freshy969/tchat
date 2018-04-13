@@ -38,7 +38,6 @@ class MessagethreadIndexItem extends React.Component{
     } else {
       output = `${Math.floor(timeAgo/(1000*3600*24*365))}` + " years ago"
     }
-    console.log(output);
 
     return(
     <button onClick={this.receiveCurrent} className="messagethread-index-item">

@@ -109,7 +109,7 @@ export const selectMessagethreads = state => {
 };
 ```
 
-2. Another snippet I want to
+2. Another snippet I want to highlight is the html behind my messaging view. Splitting the html up into two seperate subcontainers and keeping everything very separated made this an extremely simple component to style and has kept everything in their place very nicely.
 
 ```html
 <header className="message-container">
@@ -146,7 +146,19 @@ export const selectMessagethreads = state => {
 </header>
 ```
 
+3. The last piece of code I'd like to briefly highlight is incorporating cloudinary into the application. Given how the rest of the code was written fitting in an API call to an outside service was very easy.
 
+```Javascript
+handleCloudinary(e) {
+  e.preventDefault();
+  cloudinary.openUploadWidget(window.cloudinary_options, (error, results) => {
+    if(error)
+      -1;
+    else
+      this.setState({ img_url: results[0].secure_url });
+  });
+}
+```
 
 ## Design documents
 

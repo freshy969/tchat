@@ -13,6 +13,9 @@ Live link to the app can be found here --> [tChat](http://www.tchat.lgbt)
 If you are looking to participate as a member of the community you would
 
 1. go to the live link and press on the join today button.
+
+![Welcome_screen](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523652971/Screen_Shot_2018-04-13_at_1.55.46_PM.png)
+
 2. Fill out a very brief set of details for us to get your personal account set up.
 3. If you want, take a brief detour to the edit profile page to update your account info for your fans
 4. Now that you've got a pretty account all set up it's time to get chatting! Head over to the browse users page

@@ -55,9 +55,9 @@ tChat is a full-stack web app built using Ruby On Rails and Postgres on the back
 
 #### The Code
 
-There are three snippets of code that I would like to share not necessarily for their complexity but for their importance in the functioning of this project.
+There are three parts of my code that I would like to share not necessarily for their complexity but for their importance in the functioning of this project.
 
-1. the
+1. The selectors I wrote were extremely important in the implementation of my browse users and messagethread indexing features. The select users function finds all of the other users that are in the same city as the current user but are not the current user and shuffles them using a fisher-yates shuffle function. The selectMessagethreads function on the other hand orders all relevant messagethreads from state (those that the current user is a part of) and orders them by the date of the last message sent. Two fairly simple functions that handle most of the logic for their respective features.
 
 ```Javascript
 function shuffle (array) {
@@ -108,6 +108,8 @@ export const selectMessagethreads = state => {
   return sortedThreads;
 };
 ```
+
+
 
 ## Design documents
 

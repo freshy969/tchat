@@ -1,3 +1,3 @@
 # tChat
 
-[tChat live](www.tchat.lgbt)
+[tChat live](http://www.tchat.lgbt)

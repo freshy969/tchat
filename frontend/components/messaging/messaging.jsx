@@ -23,9 +23,17 @@ class Messaging extends React.Component {
     // this.scrollToBottom();
   }
 
+  componentDidMount() {
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
   scrollToBottom(){
     const element = document.getElementById("scrollBottom");
-    this.el.scrollIntoView({ behavior: "smooth" });
+    element.scrollIntoView();
   }
 
   update(field) {

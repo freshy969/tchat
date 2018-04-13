@@ -36,8 +36,18 @@ that includes information such as pronouns, screen_name, and profile picture
 
 There are many next steps for this app to go through. Here are a few.
 
-1. Enhance the messaging experience by adding notifications, having timestamps within the messagethread show page, being more clear about read and unread message threads, etc.
-2. Set up messaging to use WebSockets so that the experience is much more real time.
-3. Implement more robust error handling and notification throughout the applicaiton.
-4. General speed improvements throughout the project in an attempt to limit the amount of superfluous calls being made.
-5. 
+####Core Features
+
+1. Allow users to block other users.
+2. Users will have an internal score and ranking based around some basic data (ratio of messages sent to received, block rate compared to others, )
+3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandatae one of these codes to get on.
+
+
+####General
+
+1. Refactoring of the styling. Come up with a new color scheme and layout that isn't modeled so closely off of another site.
+2. Enhance the messaging experience by adding notifications, having timestamps within the messagethread show page, being more clear about read and unread message threads, etc.
+3. Set up messaging to use WebSockets so that the experience is much more real time.
+4. Implement more robust error handling and notification throughout the applicaiton.
+5. General speed improvements throughout the project.
+6.

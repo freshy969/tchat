@@ -20,7 +20,6 @@ class Profile extends React.Component {
   }
 
   handleModal(type) {
-    console.log(type);
     return ((e) => {
       e.preventDefault();
       this.props.openModal(type);

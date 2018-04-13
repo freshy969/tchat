@@ -72,8 +72,8 @@ There are many next steps for this app to go through. Here are a few.
 
 1. Allow users to block other users.
 2. Users will have an internal score and ranking based around some basic data (ratio of messages sent to received, block rate compared to others, )
-3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandates one of these codes to get on.
-4.
+3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandates one of these codes to get on. On the other hand users with very low scores will be prevented from adding new members or potentially will be kicked off.
+4. 
 
 
 #### General

@@ -39,7 +39,7 @@ class ProfileEdit extends React.Component {
     e.preventDefault();
     cloudinary.openUploadWidget(window.cloudinary_options, (error, results) => {
       if(error)
-        console.log(error);
+        -1;
       else
         this.setState({ img_url: results[0].secure_url });
     });

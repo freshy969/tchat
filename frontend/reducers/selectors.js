@@ -33,12 +33,22 @@ export const selectMessagethreads = state => {
   let result = [];
   for (let id in state.messagethreads){
     if (state.messagethreads[id].initiator_id === state.session.currentUser.id || state.messagethreads[id].receiver_id === state.session.currentUser.id){
+      // debugger;
       result.push(state.messagethreads[id]);
     }
   }
   if(result.length<=1){
     return result;
   }
+  const sortedThreads = result.sort( (a, b) => {
+    if (a["last_message_sent"] < b["last_message_sent"]) {
+      return 1;
+    } else if (a["last_message_sent"] > b["last_message_sent"]) {
+      return -1;
+    }
+    return 0;
+  });
+  // debugger;
   // console.log(result);
   // let unfinished = true;
   // while(unfinished && result!==[]){
@@ -57,7 +67,7 @@ export const selectMessagethreads = state => {
   //   }
   // }
   // console.log(result);
-  return result;
+  return sortedThreads;
 };
 
 export const selectMessages = state => {

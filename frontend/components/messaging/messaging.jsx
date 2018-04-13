@@ -66,7 +66,6 @@ class Messaging extends React.Component {
   //   pickUser = empty div
   // }
   render() {
-    console.log(this.props);
 
     return(
       <header className="message-container">

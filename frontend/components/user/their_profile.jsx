@@ -8,6 +8,7 @@ class Profile extends React.Component {
     super(props);
     this.props.requestUser(this.props.match.params.userId);
     this.handleToMessaging = this.handleToMessaging.bind(this);
+    this.handleModal = this.handleModal.bind(this);
   }
 
   componentWillUnmount() {
@@ -23,6 +24,7 @@ class Profile extends React.Component {
   }
 
   handleModal(type) {
+    console.log("hey hello hi");
     return ((e) => {
       e.preventDefault();
       this.props.openModal(type);

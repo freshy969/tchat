@@ -36,20 +36,27 @@ export const selectMessagethreads = state => {
       result.push(state.messagethreads[id]);
     }
   }
-  let unfinished = true;
+  if(result.length<=1){
+    return result;
+  }
+  // console.log(result);
+  // let unfinished = true;
   // while(unfinished && result!==[]){
+  //   debugger;
   //   unfinished = false;
   //   let counter = 0;
-  //   while (counter < result.length){
-  //     if (result[counter].messages.last.created_at<result[counter +1].messages.last.created_at){
+  //   while (counter < result.length-1){
+  //     console.log(result);
+  //     if (result[counter].last_message_sent<result[counter +1].messages.last_message_sent){
   //       let temp = result[counter];
   //       result[counter] = result[counter+1];
   //       result[counter+1] = temp;
   //       unfinished=true;
-  //       counter+=1;
   //     }
+  //     counter+=1;
   //   }
   // }
+  // console.log(result);
   return result;
 };
 

@@ -27,12 +27,10 @@ class Messagethread < ApplicationRecord
     foreign_key: :message_thread_id
 
 
-  def self.find_by_users (sender, receiver)
-    user = Messagethread.find_by(initiator_id: sender, receiver_id: receiver)
-    if user.nil?
-      user = Messagethread.find_by(receiver_id: sender, initiator_id: receiver)
-    end
-    return user
+  def has_thread?(other)
+    user = Messagethread.find_by(initiator_id: self.id, receiver_id: other)
+    user ||= Messagethread.find_by(receiver_id: other, initiator_id: self.id)
+    return user.nil? true : false
   end
 
 end

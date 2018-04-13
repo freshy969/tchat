@@ -4,12 +4,14 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../login_form/login_form_container';
 import SignupFormContainer from '../login_form/signup_form_container';
 import GuestLoginFormContainer from '../login_form/guest_login_container';
+import MessageCreateContainer from '../messaging/message_create_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
   let component;
+  console.log("what up")
   switch (modal) {
     case 'login':
       component = <LoginFormContainer />;
@@ -19,6 +21,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'signup':
       component = <SignupFormContainer />;
+      break;
+    case 'newPost':
+      component = <MessageCreateContainer />;
       break;
     default:
       return null;

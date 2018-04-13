@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {receiveCurrentMessagethreadId} from '../../actions/message_actions';
-
+import Modal from '../modal/modal';
 class Profile extends React.Component {
 
   constructor(props) {
@@ -24,7 +24,7 @@ class Profile extends React.Component {
   }
 
   handleModal(type) {
-    console.log("hey hello hi");
+    console.log(type);
     return ((e) => {
       e.preventDefault();
       this.props.openModal(type);
@@ -38,6 +38,7 @@ class Profile extends React.Component {
     if (this.props.user)
     return (
       <header className="profile-container">
+        <Modal />
         <div className="profile">
           <div id="top-bar">
             <img id="profpicture" src={`${this.props.user.img_url || 'http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523398897/default.jpg'}`}/>
@@ -53,7 +54,7 @@ class Profile extends React.Component {
                 </div>
               </div>
               <div id="profile-nav-buttons-container">
-                <Link to={`/messaging`} id="profile-nav-buttons" onClick={this.handleToMessaging}>
+                <Link to={`/messaging`} id="profile-nav-buttons" onClick={this.handleModal("newPost")}>
                   <span>Message</span>
                 </Link>
               </div>

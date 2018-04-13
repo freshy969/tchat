@@ -12,7 +12,7 @@ Live link to the app can be found here --> [tChat](http://www.tchat.lgbt)
 
 If you are looking to participate as a member of the community you would
 
-1. go to the live link and press on the join today button or just hit Demo and skip to step three if you're there for a quick peek.
+1. go to the live link and press on the join today button or just hit Demo and skip to step three if you're just here for a quick peek.
 
 ![Welcome_screen](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523652971/Screen_Shot_2018-04-13_at_1.55.46_PM.png)
 
@@ -29,8 +29,17 @@ If you are looking to participate as a member of the community you would
 ![Browse_users](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523653512/Screen_Shot_2018-04-13_at_2.04.11_PM.png)
 
 5. On the browse users page you can click on any user to see what they've got going on. All users will be in the city you have listed on your profile.
+
+![Their_profile](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523653734/Screen_Shot_2018-04-13_at_2.08.28_PM.png)
+
 6. Now that you're here you should see a message button on the right. Click that and a modal will pop up. Type out a fun first message.
-7. You will now be taken to the messages page. Now you can just wait until they get back. You're officially tChatting.
+
+![Message_poppup](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523653891/Screen_Shot_2018-04-13_at_2.11.00_PM.png)
+
+7. You will now be taken to the messages page. Now you can just wait until somebody gets back. You're officially tChatting.
+If you ever run out of conversation just hit Browse Users to find more people.
+
+![Message_page](http://res.cloudinary.com/dyv6nxcqz/image/upload/v1523654062/Screen_Shot_2018-04-13_at_2.13.51_PM.png)
 
 ## What it does
 

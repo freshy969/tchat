@@ -13,6 +13,7 @@ const mapStateToProps = (state) => {
     currentUser: state.session.currentUser,
     currentMessagethread: state.messagethreads[state.ui.currentMessagethread],
     user: state.user,
+    message: '',
     sender_id: state.session.currentUser.id
   };
 };

@@ -20,12 +20,18 @@ class MessageCreate extends React.Component {
   handleSubmit(e) {
     console.log(this.props);
     e.preventDefault();
-    let message2 = {
+    let messagethread1 = {
       receiver_id: this.props.user.id,
       initiator_id: this.props.sender_id,
     }
-    const messagethread = Object.assign({}, this.state, message2);
-    this.props.postMessageThread(messagethread).then(() => this.props.requestMessagethreads());
+    let message1 = {
+      receiver_id: this.props.user.id,
+      sender_id: this.props.sender_id,
+
+    }
+    const messagethread = Object.assign({}, this.state, messagethread1);
+    this.props.postMessageThread(messagethread).then((messagethread) => console.log(messagethread));
+    // this.props.postNewMessage(message)).then(() => this.props.requestMessagethreads());
   }
 
   checkForEnter(e){

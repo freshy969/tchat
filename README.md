@@ -49,15 +49,10 @@ The two other major features that exist because of this are profiles and the bro
 
 ## How it was built
 
-tChat is a full-stack web app built using Ruby On Rails and Postgres on the back end and a react/redux front end. The site is current hosted on Heroku but will likely be  
-- Ruby On Rails
-- PostgreSQL
-- React
-- Redux
-- Cloudinary
-- Heroku
-- ActiveRecord
-- Front End/Back End Auth
+#### Technology
+tChat is a full-stack web app built using Ruby On Rails and Postgres on the back end and a react/redux front end. The site is current hosted on Heroku. Additionally Cloudinary was used for photo storage and user uploads.
+
+#### The Code
 
 ## Design documents
 

@@ -16,7 +16,9 @@ If you are looking to participate as a member of the community you would
 2. Fill out a very brief set of details for us to get your personal account set up.
 3. If you want, take a brief detour to the edit profile page to update your account info for your fans
 4. Now that you've got a pretty account all set up it's time to get chatting! Head over to the browse users page
-5. On the browse users page you can click on
+5. On the browse users page you can click on any user to see what they've got going on. All users will be in the city you have listed on your profile.
+6. Now that you're here you should see a message button on the right. Click that and a modal will pop up. Type out a fun first message.
+7. You will now be taken to the messages page. Now you can just wait until they get back. You're officially tChatting.
 
 ## What it does
 
@@ -31,6 +33,8 @@ that includes information such as pronouns, screen_name, and profile picture
 - Redux
 - Cloudinary
 - Heroku
+- ActiveRecord
+- Front End/Back End Auth
 
 ## Design documents
 
@@ -48,7 +52,8 @@ There are many next steps for this app to go through. Here are a few.
 
 1. Allow users to block other users.
 2. Users will have an internal score and ranking based around some basic data (ratio of messages sent to received, block rate compared to others, )
-3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandatae one of these codes to get on.
+3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandates one of these codes to get on.
+4.
 
 
 #### General

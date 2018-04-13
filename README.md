@@ -18,11 +18,6 @@ If you are looking to participate as a member of the community you would
 4. Now that you've got a pretty account all set up it's time to get chatting! Head over to the browse users page
 5. On the browse users page you can click on
 
-If you are looking to learn a little bit more about the project and the creator
-
-1.
-
-
 ## What it does
 
 As of now tChat does all the basics you expect from a dating app. You can make and edit an account
@@ -30,24 +25,36 @@ that includes information such as pronouns, screen_name, and profile picture
 
 ## How it was built
 
+- Ruby On Rails
+- PostgreSQL
+- React
+- Redux
+- Cloudinary
+- Heroku
+
 ## Design documents
+
++ [MVP List](mvp-List)
++ [Schema](schema)
++ [Routes](routes)
++ [Sample State](sample-state)
++ [Component Hierarchy](component-hierarchy)
 
 ## Where it will go from here
 
 There are many next steps for this app to go through. Here are a few.
 
-####Core Features
+#### Core Features
 
 1. Allow users to block other users.
 2. Users will have an internal score and ranking based around some basic data (ratio of messages sent to received, block rate compared to others, )
 3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandatae one of these codes to get on.
 
 
-####General
+#### General
 
-1. Refactoring of the styling. Come up with a new color scheme and layout that isn't modeled so closely off of another site.
+1. Refactoring of the html and css. Come up with a new color scheme and layout that isn't modeled so closely off of another site.
 2. Enhance the messaging experience by adding notifications, having timestamps within the messagethread show page, being more clear about read and unread message threads, etc.
 3. Set up messaging to use WebSockets so that the experience is much more real time.
 4. Implement more robust error handling and notification throughout the applicaiton.
 5. General speed improvements throughout the project.
-6.

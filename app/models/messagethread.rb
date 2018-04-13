@@ -28,14 +28,14 @@ class Messagethread < ApplicationRecord
 
 
   def self.find_by_users (sender, receiver)
-    user = Messagethread.find_by(initiator_id: sender, receiver_id: receiver)
-    if user.nil?
-      user = Messagethread.find_by(receiver_id: sender, initiator_id: receiver)
+    thread = Messagethread.find_by(initiator_id: sender, receiver_id: receiver)
+    if thread.nil?
+      thread = Messagethread.find_by(receiver_id: sender, initiator_id: receiver)
     end
-    if user.nil?
-      return false
+    if thread.nil?
+      return nil
     end
-    return true
+    return thread.id
   end
 
 end

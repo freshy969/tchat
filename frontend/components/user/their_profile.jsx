@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {receiveCurrentMessagethreadId} from '../../actions/message_actions';
 
 class Profile extends React.Component {
 
   constructor(props) {
     super(props);
     this.props.requestUser(this.props.match.params.userId);
+    this.handleToMessaging = this.handleToMessaging.bind(this);
   }
 
   componentWillUnmount() {
@@ -18,6 +20,11 @@ class Profile extends React.Component {
   //     this.props.requestUser(nextProps.match.params.userId);
   //   }
   // }
+
+  handleToMessaging(){
+    debugger;
+    this.props.receiveCurrentMessagethreadId(this.props.user.hasThread);
+  }
 
   render() {
     if (this.props.user===null){
@@ -41,7 +48,7 @@ class Profile extends React.Component {
                 </div>
               </div>
               <div id="profile-nav-buttons-container">
-                <Link to={`/messaging`} id="profile-nav-buttons">
+                <Link to={`/messaging`} id="profile-nav-buttons" onClick={this.handleToMessaging}>
                   <span>Message</span>
                 </Link>
               </div>

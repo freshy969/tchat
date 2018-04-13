@@ -50,9 +50,64 @@ The two other major features that exist because of this are profiles and the bro
 ## How it was built
 
 #### Technology
+
 tChat is a full-stack web app built using Ruby On Rails and Postgres on the back end and a react/redux front end. The site is current hosted on Heroku. Additionally Cloudinary was used for photo storage and user uploads.
 
 #### The Code
+
+There are three snippets of code that I would like to share not necessarily for their complexity but for their importance in the functioning of this project.
+
+1. the
+
+```Javascript
+function shuffle (array) {
+  let i = 0;
+  let j = 0
+  let temp = null
+
+  for (i = array.length - 1; i > 0; i -= 1) {
+    j = Math.floor(Math.random() * (i + 1))
+    temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
+}
+
+export const selectUsers = state => {
+  let result = [];
+  for (let id in state.users){
+    if (state.users[id].id !== state.session.currentUser.id){
+      if (state.users[id].city === state.session.currentUser.city){
+        result.push(state.users[id]);
+      }
+    }
+  }
+  shuffle(result);
+  return result;
+};
+
+export const selectMessagethreads = state => {
+  let result = [];
+  for (let id in state.messagethreads){
+    if (state.messagethreads[id].initiator_id === state.session.currentUser.id || state.messagethreads[id].receiver_id === state.session.currentUser.id){
+      // debugger;
+      result.push(state.messagethreads[id]);
+    }
+  }
+  if(result.length<=1){
+    return result;
+  }
+  const sortedThreads = result.sort( (a, b) => {
+    if (a["last_message_sent"] < b["last_message_sent"]) {
+      return 1;
+    } else if (a["last_message_sent"] > b["last_message_sent"]) {
+      return -1;
+    }
+    return 0;
+  });
+  return sortedThreads;
+};
+```
 
 ## Design documents
 
@@ -70,7 +125,6 @@ There are many next steps for this app to go through. Here are a few.
 1. Allow users to block other users.
 2. Users will have an internal score and ranking based around some basic data (ratio of messages sent to received, block rate compared to others, )
 3. Users will have an add user feature if their score is good enough that allows them to add new users through a temporary one sign up code they can send to a friend. Sign up will now mandates one of these codes to get on. On the other hand users with very low scores will be prevented from adding new members or potentially will be kicked off.
-4.
 
 
 #### General
